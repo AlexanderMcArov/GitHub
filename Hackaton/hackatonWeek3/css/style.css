@@ -220,6 +220,77 @@ i::before{
     box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.75);
 }
 
+/* PORTFOLIO */
+.portfolio{
+    text-align: center;
+    padding: 40px 0 40px 0;  
+}
+.portfolio-link{
+    background-color: rgb(200, 200, 200);
+}
+.portfolio-link:hover{
+    background-color: rgb(150, 150, 150);
+}
+.portfolio img{
+    width: 100%;
+}
+
+.portfolio__list{
+    position: relative;
+}
+
+.portfolio__list_link1{
+    width: 100%;
+}
+.portfolio__list_link1:hover ~ .portfolio__list_item1{
+    display: block;
+    margin-top: 50px;
+}
+.portfolio__list_link2{
+    width: 100%;
+}
+.portfolio__list_link2:hover ~ .portfolio__list_item2{
+    display: block;
+    margin-top: 50px;
+}
+.portfolio__list_link3{
+    width: 100%;
+}
+.portfolio__list_link3:hover ~ .portfolio__list_item3{
+    display: block;
+    margin-top: 50px;
+}
+.portfolio__list_link4{
+    width: 100%;
+}
+.portfolio__list_link4:hover ~ .portfolio__list_item4{
+    display: block;
+    margin-top: 50px;
+}
+
+.portfolio__list_item1{
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+.portfolio__list_item2{
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+.portfolio__list_item3{
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+.portfolio__list_item4{
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+/* /PORTFOLIO */
+
+
 .skills h1{
     font-family: 'Anton', sans-serif;
     letter-spacing: 2px;
