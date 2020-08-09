@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500;600;700&display=swap');
+
+.header{
+    color: white;
+    font-weight: 600;
+    background: url(/img/header-fon.jpg);
+    background-size: cover;
+    height: 700px;
+}
+
+.header a{
+    color: rgb(200, 200, 200);
+}
+
+.header_gradient{
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(50,50,50,0.8) 0%, rgba(121,121,121,0.44861694677871145) 50%, rgba(255,255,255,0.5) 95%);
+}
+
+.header a:hover{
+    outline: none;
+    text-decoration: none;
+    border: none;
+    color: white;
+    font-weight: 500;
+}
+
+.navbar{
+    font-family: 'Kanit', sans-serif;
+}
+
+.navbar span{
+    width: 1px;
+    height: 25px;
+    margin-top: 5px;
+    background-color: rgb(200, 200, 200);
+}
+
+.navbar__logo{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-weight: 600;
+}
+
+.navbar__logo i::before{
+    font-size: 20px;
+    color: rgb(220, 220, 220);
+}
+
+.navbar__menu{
+    display: flex;
+    justify-content: right;
+ }
+#btn-getstarted{
+    background-color: rgba(190, 196, 194, 1);
+    font-weight: 400;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 0px;
+}
+
+#btn-getstarted:hover{
+    background-color: rgba(190, 196, 194, 0.5);
+}
+
+.header-content{
+    padding: 150px 0 150px 0;
+    align-items: center;
+}
+
+.header-content h1,h5{
+    margin: 10px;
+}
+
+#btn-learnmore{
+    font-weight: 400;
+    padding: 15px 60px 15px 60px;
+    border-radius: 1px;
+    border: 0px;
+    background-color: #6bbb3b;
+    margin-left: 10px;
+}
+  /* CONtent */
+
+.content{
+    padding: 80px 0 80px 0;
+    color: #2d6e70;
+    height: 1000px;
+}
+.content h6{
+    font-weight: 400;
+}
+.content_title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.content h1{
+    font-weight: 500;
+}
+
+.title_line-down{
+    margin-top: 15px;
+    width: 80px;
+    height: 1px;
+    background-color: #6fb048;
+}
+  /*  /CONtent */
+
+/* 3 column Items */
+
+.col-lg-item h5{
+    font-weight: 700;
+    margin: 20px 0 20px 0;
+}
+
+.col-lg-item h6{
+    font-size: 15px;
+    margin: 20px 0 20px 0;
+}
+/* /3 column Items */
+
+.content_other-item{
+    padding: 0 40px 0 0;
+    text-align: left;
+}
+
+.other_item-title{
+    display: flex;
+    align-items: center;
+}
+
+.other_list-title h5,h6{
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width:768px){
+    .navbar__menu{
+        justify-content: center;
+        flex-direction: column;
+    }
+}
