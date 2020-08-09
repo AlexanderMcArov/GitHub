@@ -7,7 +7,7 @@ menu - z-index: 10;
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-image: url(/img/images.jpg);
+    background-image: url(../img/images.jpg);
 }
 
 /* HamburgerMenu */
@@ -110,7 +110,7 @@ body{
     height: 250px;
     font-family: 'Anton', sans-serif;
     /* background-color: rgba(115,115,115,1); */
-    background-image: url(/img/kyrgyzstan.jpg);
+    background-image: url(../img/kyrgyzstan.jpg);
     background-size: cover;
     letter-spacing: 2px;
 }
@@ -307,7 +307,7 @@ i::before{
 .questions{
     padding-top: 30px;
     padding-bottom: 30px;
-    background: url(/img/questions.jpg);
+    background: url(../img/questions.jpg);
     background-size: cover;
 }
 

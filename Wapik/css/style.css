@@ -3,7 +3,7 @@
 .header{
     color: white;
     font-weight: 600;
-    background: url(/img/header-fon.jpg);
+    background: url(../img/header-fon.jpg);
     background-size: cover;
     height: 700px;
 }
