@@ -1,0 +1,249 @@
+body {
+    margin: 0;
+    max-width: 1920px;
+}
+
+@font-face {
+    font-family: Raleway; 
+    src: url(fonts/Raleway-VariableFont_wght.ttf); 
+   }
+
+.container{
+    width: 100%;
+    display: block;
+    background: linear-gradient(180deg, #242B33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242B33 92.19%), url(img/fon.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 840px;
+}
+
+
+.navbar_left{
+    position: absolute;
+    left: 400px;
+    margin-top: 30px;
+}
+.navbar_right{
+    position: absolute;
+    left: 950px;
+    margin-top: 20px;
+}
+
+.menu_item{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    margin-right: 20px;
+}
+
+h1{
+    color: #D4C17F;
+}
+
+ul{
+    color: snow;
+}
+
+li{
+    list-style-type: none;
+    float: left;
+}
+
+.menu_btn{
+    display: none;
+    visibility: hidden;
+}
+
+
+.welcome-block{
+    position: absolute;
+    width: 800px;
+    left: 450px;
+    top: 246px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 64px;
+    text-align: center;
+}
+
+.welcome-block li{
+    position: relative;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    margin-right: 50px;
+    margin-top:200px;
+}
+
+content{
+    position: absolute;
+    width: 1920px;
+    height: 700px;
+    text-align: center;
+    background-color: #242B33;
+    border-top: black 4px solid;
+    padding-top: 30px;
+}
+
+.info{
+    position: absolute;
+    padding-top: 40px;
+    width: 1000px;
+    height: 200px;
+    text-align: center;
+    background-image: url('/img/II.png');
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: right;    
+    left: 450px;
+}
+.info-item{
+    width: 199px;
+    height: 199px;
+    float: left;
+    color: snow;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+    font-family: Raleway;    
+}
+
+@media screen and (max-width: 1480px){
+    content{
+        position: absolute;
+        height: 700px;
+        width: 1440px;
+        text-align: center;
+        background-color: #242B33;
+        border-top: black 4px solid;
+        padding-top: 30px;
+    }
+    
+    .info{
+        position: absolute;
+        padding-top: 40px;
+        width: 1000px;
+        height: 200px;
+        text-align: center;
+        background-image: url('/img/II.png');
+        background-size: 200px;
+        background-repeat: no-repeat;
+        background-position: right;    
+        left: 250px;
+    }
+    .navbar_left{
+        position: absolute;
+        left: 200px;
+        margin-top: 30px;
+    }
+    .navbar_right{
+        position: absolute;
+        left: 700px;
+        margin-top: 20px;
+    }
+    .welcome-block{
+        left: 340px;
+    }
+  }
+  
+  @media screen and (max-width: 1024px){
+    content{
+        position: absolute;
+        height: 700px;
+        width: 1024px;
+        text-align: center;
+        background-color: #242B33;
+        border-top: black 4px solid;
+        padding-top: 30px;
+    }
+    
+    .info{
+        position: absolute;
+        padding-top: 40px;
+        width: 1000px;
+        height: 200px;
+        text-align: center;
+        background-image: url('/img/II.png');
+        background-size: 200px;
+        background-repeat: no-repeat;
+        background-position: right;    
+        left: 50px;
+    }
+    .navbar_left{
+        position: absolute;
+        left: 50px;
+        margin-top: 30px;
+    }
+    .navbar_right{
+        position: absolute;
+        left: 450px;
+        margin-top: 20px;
+    }
+    .welcome-block{
+        left: 150px;
+    }
+  }
+  @media screen and (max-width: 768px){
+    content{
+        position: absolute;
+        height: 768px;
+        width: 100%;
+        text-align: center;
+        background-color: #242B33;
+        border-top: black 4px solid;
+        padding-top: 30px;
+    }
+    .info{
+        position: absolute;
+        padding-top: 40px;
+        width: 768px;
+        height: 200px;
+        text-align: center; 
+        left: 250px;
+    }
+    .navbar_left{
+        position: absolute;
+        left: 50px;
+        margin-top: 30px;
+    }
+    .navbar_right{
+        position: absolute;
+        left: 450px;
+        margin-top: 20px;
+    }
+    .welcome-block{
+        left: 100px;
+    }
+    .menu_btn > span,
+    .menu_btn > span::before,
+    .menu_btn > span::after{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    }
+    .menu_btn > span::before{
+        content: '';
+        top: -8px;
+    }
+    .menu_btn > span::after{
+        content: '';
+        top: 8px;   
+    }    
+  }
+  @media screen and (max-width: 600px){
+    .media-box{
+      width: 50%;
+    }
+    .media-box.large{
+      width:100%;
+      background-color: blue;
+    }
+  }
