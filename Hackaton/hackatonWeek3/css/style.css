@@ -162,6 +162,8 @@ i::before{
 }
 
 .contact{
+    background: rgb(115,115,115);
+    background: linear-gradient(180deg, rgba(115,115,115,1) 0%, rgba(251,251,251,1) 100%);
     padding: 15px;
 }
 
