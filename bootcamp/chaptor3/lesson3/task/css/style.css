@@ -1,0 +1,149 @@
+.logo{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.menu{
+    margin-top: 6px;
+}
+  
+li{
+    list-style-type: none;
+}
+
+.nav-item{
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+.nav-item:hover{
+    border-bottom: 2px solid red;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 12px;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 0.58651px;
+}
+a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.btn__brif{
+    width: 212px;
+    height: 48px;
+    border: 0 solid;
+    background-color: red;
+    color: white;
+    margin-top: 10px;
+    font-family: Montserrat ;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.team__items{
+    width: 150px;
+    height: 150px;
+    background-color: black; 
+    margin: 10px;
+    justify-content: center;
+}
+
+.team__icon{
+    width: 100px;
+    height: 100px;
+    border: #9f9f9f 2px solid;
+    background-color: #3aff3a;
+    border-radius: 50%;
+}
+
+h1{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 61px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    letter-spacing: 3.75px;
+    text-transform: uppercase;
+}
+h2{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 0.864px;
+}
+h3{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.384px;
+}
+h4{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    display: flex;
+    align-items: flex-end;
+}
+h1,h2,h3{
+    margin-top: 30px;
+}
+.tc{
+    font-family: Montserrat2;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    letter-spacing: 0.384px;
+}
+
+.tcc{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.384px;
+}
+@font-face {
+    font-family: Montserrat; 
+    src: url(/fonts/Montserrat-SemiBold.ttf); 
+    src: url(/fonts/Montserrat-Light.ttf); 
+    src: url(/fonts/Montserrat-Bold.ttf); 
+   }
+@font-face {
+    font-family: Montserrat2; 
+    src: url(/fonts/Montserrat-Light.ttf); 
+   };
+@font-face {
+    font-family: Raleway; 
+    src: url(/fonts/Raleway-VariableFont_wght.ttf); 
+   };

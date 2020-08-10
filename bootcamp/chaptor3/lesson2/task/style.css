@@ -1,0 +1,133 @@
+/* Task #1 
+  �������� ��������, ����� box's ����������� ��������.
+
+   Task #2
+  �������� �������� ���������. ����� ����� ������������� �� �������.
+*/
+
+  .container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .eyes{
+    display: flex;
+    height: 120px;
+    align-items: center;
+  }
+  .box{
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    margin: 10px;
+    transition: 2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: box 4s;
+    animation-iteration-count: infinite;
+
+  }
+  .point{
+    width: 10px;
+    height: 10px;
+    background-color: #FFF;
+  }
+  .stick{
+    width: 200px;
+    height: 10px;
+    background-color: green;
+    margin: 20px;
+    margin-top: 50px;
+  }
+  
+  .traffic-light{
+    width: 150px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .traffic-light .circle{
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: #FFF;
+  }
+  
+  .red{
+      animation: red 6s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      
+  }
+  .yellow{
+      animation: yellow 6s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+  }
+  .green{
+      animation: green 6s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+  }
+
+  @keyframes box {
+    0%{
+    }
+    50%{
+        height: 0px;
+    }
+    100%{
+      
+    }
+  }
+
+  @keyframes red {
+    10%{
+        background-color: #fff;
+    }
+    10.1%{
+        background-color: red;
+    }
+    32.9%{
+      background-color: red;
+    }
+    33%{
+        background-color: #fff;
+    }
+  }
+  @keyframes yellow {
+    33%{
+        background-color: #fff;        
+    }
+    33.1%{
+        background-color: yellow;
+    }
+    65.9%{
+      background-color: yellow;
+    }
+    66%{
+        background-color: #fff;
+    }
+  }
+  @keyframes green {
+    66%{ 
+        background-color: #fff;
+    }
+    66.1%{
+        background-color: green;
+    }
+    98.9%{
+      background-color: green;
+  }
+    99%{
+        background-color: #fff;
+    }    
+  }

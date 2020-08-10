@@ -1,0 +1,13 @@
+.random div{
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    margin: 10px;
+    color: blanchedalmond;
+    font-size: 40px;
+}
+
+
+#random{
+    display: block;
+}

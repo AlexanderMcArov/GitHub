@@ -1,0 +1,155 @@
+body{
+    margin:0;
+}
+
+
+.clock{
+    position: relative;
+    width: 320px;
+    height: 320px;
+    background-color: white;
+    left: 35%;
+    top: 50%;
+}
+.blockclock{
+    width: 320px;
+    height: 320px;
+    border: black 3px solid;
+    border-radius: 160px;
+    position: absolute;
+}
+.timerhour{
+    animation-name: rotate;
+    animation-duration: 86400s;
+    animation-iteration-count: infinite;
+}
+.timerminute{
+    animation-name: rotate;
+    animation-duration: 3600s;
+    animation-iteration-count: infinite;
+}
+.timersecond{
+    animation-name: rotate;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+}
+.hour{
+    width: 10px;
+    height: 160px;
+    position: absolute;
+    left: 50%;
+    background-color: black;
+    z-index: 1;
+}
+
+.minute{
+    width: 10px;
+    height: 160px;
+    position: absolute;
+    left: 50%;
+    background-color: green;
+    z-index: 2;
+    opacity: 0.5;
+}
+.second{
+    width: 10px;
+    height: 160px;
+    position: absolute;
+    left: 50%;
+    background-color: red;
+    z-index: 3;
+    opacity: 0.5;
+}
+
+.animation-block{
+    float: left;
+    width: 500px;
+    height: 500px;
+    opacity: 1;
+    border: snow 2px solid;
+    background-color: black;    
+    /* animation-name: box; */
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1,1,1,1);
+    box-shadow: 9px 11px 80px 0px rgba(0,0,0,1);
+}
+.animation-block:hover{
+    background-color: green;
+    border-radius: 250px;
+    animation-name: box;
+}
+.loading{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    animation: loading 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    color: khaki;
+    font-size: 30px;
+}
+p{
+    animation-name: sliedIn;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.ghosty-lock{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    
+    background-color: black;
+    /* animation-name: fadeIn; */
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate{
+    from{
+
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes loading{
+    from{
+        left:50%;
+        top:50%;
+    }
+    to{
+        transform: rotate(600deg);
+        color: black;
+    }
+}
+@keyframes sliedIn{
+    from{
+        margin-left: 100%;
+        width: 300%;
+    }
+    to{
+        margin: 0%;
+        width: 100%;
+    }
+}
+@keyframes box{
+    from{
+        left: 0;
+    }
+    to{
+        opacity: 1;
+        background-color: green;
+        transform: rotate(360deg);
+    }
+}
