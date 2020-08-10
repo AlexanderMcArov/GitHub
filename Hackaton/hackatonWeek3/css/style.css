@@ -110,10 +110,15 @@ body{
     height: 250px;
     font-family: 'Anton', sans-serif;
     /* background-color: rgba(115,115,115,1); */
-    background-image: url(../img/kyrgyzstan.jpg);
+    background-image: url(../img/header_fon.jpg);
     background-size: cover;
     letter-spacing: 2px;
 }
+.header__gradient{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 i::before{
     font-size: 20px;
     margin-left: 20px;
