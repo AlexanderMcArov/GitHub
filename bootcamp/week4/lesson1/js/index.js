@@ -49,3 +49,50 @@ console.log(a + 5);
 
 let b = null;
 console.log(b);
+
+// object
+
+let object = {
+    name: 'Sanya',
+    age: 24,
+    email: 'alexandercom445@gmail.com',
+    hobby: {
+        key: 2
+    },
+    dog: {
+        name: 'Sharik',
+        color: {
+            fon: ['22',33,44,{
+                r:1,
+                g:2
+            }],
+            main: 10
+        },
+        age: 20
+    }
+};
+
+let x = 'name';
+console.log(object.name);
+console.log(object);
+console.log(object.dog.color.fon[object.dog.color.fon.length-1].g);
+
+// Arrow
+
+let arrow = [
+    {
+        name: 'ArrowUser'
+    },1,2,3,4,5,6,7,8,9,10
+]
+
+console.log(arrow.length);
+console.log(arrow[0].name);
+console.log(arrow[(arrow.length-1)]);
+console.log(arrow[9]); 
+
+let arrlist = []
+
+arrlist[0] = 1;
+arrlist[1] = 2;
+
+console.log(arrlist[1])
