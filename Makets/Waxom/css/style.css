@@ -1,19 +1,21 @@
 
 .gradient-black{
-    background-color: rgba(0, 0, 0, 0.85)
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .header{
     background-image: url(../img/header_fon.jpg);
     background-size: cover;
+    background-position: -10px;
     color:white;
+    border: red 2px solid;
 }
 
 .header__title{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 0 50px 0
+    padding: 100px 0 70px 0
 }
 #btn_demos{
     margin-top: 50px;
