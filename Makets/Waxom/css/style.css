@@ -1,0 +1,127 @@
+
+.gradient-black{
+    background-color: rgba(0, 0, 0, 0.85)
+}
+
+.header{
+    background-image: url(../img/header_fon.jpg);
+    background-size: cover;
+    color:white;
+}
+
+.header__title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0 50px 0
+}
+#btn_demos{
+    margin-top: 50px;
+    padding: 15px 30px 15px 30px;
+    font-weight: 500;
+    border: white 2px solid;
+    color: white;
+    transition: all 0.3s;
+}
+#btn_demos:hover{
+    background-color: white;
+    color: rgb(100, 100, 100)
+}
+.header__navbar{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px 0 30px 0;
+}
+
+.navbar__links{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    color: white;
+    font-size: 15px;
+    font-weight: 200;
+    padding-right: 20px;
+}
+
+.navbar__link{
+    margin: 0 15px 0 15px;
+}
+
+.navbar__link a{
+    color: white;
+}
+
+.navbar__link:hover a{
+
+    color: rgb(200, 200, 200);
+    outline: none;
+    text-decoration: none;
+    border: 0px; 
+}
+
+ /* CONTENT  */
+.container{
+    flex-wrap: wrap;
+}
+
+.img{
+    display: block;
+    position: relative;
+    width: 250px;
+    height: 350px;
+    margin: 5px;
+    overflow: hidden;
+    border: red 2px solid;
+}
+
+.img img{
+    width: 110%;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    position: absolute;
+    transition: all 0.6s;
+}
+
+.img:hover img{
+    width: 120%;
+    top: -25px;
+    right: -25px;
+    bottom: -25px;
+    left: -25px;    
+    transition: all 0.6s;
+}
+
+.img__gradient{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 50%;
+    opacity: 0;
+    color: white;
+    transition: all 0.6s;   
+}
+
+.img__gradient_title{
+    width: min-content;
+    height: min-content;
+    padding: 10px;
+    border: white 2px solid;
+    border-radius: 0.5em;
+    transition: all 0.4s;
+}
+
+.img__gradient_title h4{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.img__gradient:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+}
