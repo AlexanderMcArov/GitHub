@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Task 6
+        let age = parseInt(prompt('Сколько Вам лет?'))
+        console.log(age)
+        if( 1 < age && age <= 13){
+            alert('Посмотрите мультфильм "Skoopy - doo" ')
+        }else if(14 < age && age <= 17){
+            alert('Посмотрите фильм "Гарри Поттера"')
+        }else{
+            alert('Посмотрите мульфильм "Ледниковый Период - 1" ')
+        }
+
+        // Task 7
+        let chooseDrink = prompt('Введите название любимого напитока')
+        switch(chooseDrink){
+            case 'vodka':    alert('Чреземерное употребление алкоголя, вредит здоровью')
+                break;
+            case 'водка':    alert('Чреземерное употребление алкоголя, вредит здоровью')
+                break;
+            case 'beer':     alert('Чреземерное употребление алкоголя, вредит здоровью')
+                break;
+            case 'пиво':     alert('Чреземерное употребление алкоголя, вредит здоровью')
+                break;
+            case 'coffee':   alert('Чреземерное употребление кофеина, вредит здоровью')
+                break;
+            case 'кофе':     alert('Чреземерное употребление кофеина, вредит здоровью')
+                break;
+            case 'milk':     alert('Очень хороший выбор.')
+                break;
+            case 'молоко':   alert('Очень хороший выбор.')
+                break;
+            default: alert('Этот напиток не представляет ценности.')
+        }
+
+        // Task 8 
+        /* 
+            Написать в текстовом документе, чему равны следующие булевые выражения в JavaScript.
+            Сделать последовательное упрощениек булевым величинам.
+            1. (2 < 3)  && (3 > 4) || true
+            2. !true && (!true || 100 != 5*5)
+            3. (“123” == 123) || ((10 <= 10) && (‘ ’ === false)) 
+
+                            Решение:
+                            
+                1. ( 2 < 3 ) && ( 3 > 4 ) || true
+                           false && false || true
+                                    false || true
+                                             true
+                
+                Ответ: true
+                
+                2.  !true && (!true || 100 != 5*5)
+                    !true && (false || 100 != 25)
+                    !true && (false || true)
+                              false && true
+                              false
+
+                Ответ: false
+
+                3. ("123" == 123) || ((10 <= 10) && ( "" === false ))
+                             true || (true && false)
+                             true || false
+                             true
+
+                Ответ: true
+        */
+        
+        // checkTask8
+        console.log(( 2 < 3 ) && ( 3 > 4 ) || true)
+        console.log(!true && (!true || 100 != 5*5))
+        console.log(("123" == 123) || ((10 <= 10) && ("" === false)))
+
+
+    </script>
+</body>
+</html>
