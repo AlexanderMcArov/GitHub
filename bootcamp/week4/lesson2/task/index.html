@@ -10,16 +10,19 @@
         // Task 6
         let age = parseInt(prompt('Сколько Вам лет?'))
         console.log(age)
-        if( 1 < age && age <= 13){
+        if( 1 <= age && age <= 13){
             alert('Посмотрите мультфильм "Skoopy - doo" ')
-        }else if(14 < age && age <= 17){
+        }else if(14 <= age && age <= 17){
             alert('Посмотрите фильм "Гарри Поттера"')
-        }else{
+        }else if(18 <= age ){
             alert('Посмотрите мульфильм "Ледниковый Период - 1" ')
+        }else{
+            alert('Не могу ничего посоветовать. ')
         }
 
         // Task 7
-        let chooseDrink = prompt('Введите название любимого напитока')
+        let chooseDrink = prompt('Введите название любимого напитка')
+        console.log(chooseDrink)
         switch(chooseDrink){
             case 'vodka':    alert('Чреземерное употребление алкоголя, вредит здоровью')
                 break;
@@ -37,6 +40,8 @@
                 break;
             case 'молоко':   alert('Очень хороший выбор.')
                 break;
+            case '':   alert('Вы ничего не ввели.')
+                break;
             default: alert('Этот напиток не представляет ценности.')
         }
 
@@ -49,7 +54,7 @@
             3. (“123” == 123) || ((10 <= 10) && (‘ ’ === false)) 
 
                             Решение:
-                            
+
                 1. ( 2 < 3 ) && ( 3 > 4 ) || true
                            false && false || true
                                     false || true
