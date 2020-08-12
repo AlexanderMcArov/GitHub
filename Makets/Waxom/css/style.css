@@ -51,6 +51,10 @@
     padding-right: 20px;
 }
 
+.navbar__links i::before{
+    font-size: 20px;
+}
+
 .navbar__link{
     margin: 0 15px 0 15px;
 }
@@ -90,6 +94,7 @@
 .content__portfolio{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -98,7 +103,7 @@
     position: relative;
     width: 250px;
     height: 350px;
-    margin: 5px;
+    margin: 10px;
     overflow: hidden;
     transition: all 0.6s;
 }
@@ -110,7 +115,7 @@
 }
 
 .img:hover img{
-    width: 110%;
+    width: 105%;
     transition: all 0.6s;
 }
 
@@ -147,4 +152,17 @@
 .img__gradient:hover{
     background-color: rgba(0, 0, 0, 0.4);
     opacity: 1;
+}
+
+.footer{
+    padding: 30px 0 30px 0;
+    font-size: 13px;
+    color: rgb(100, 100, 100);
+    background-color: black;
+}
+
+.footer__icons i::before{
+    font-size: 20px;
+    margin: 8px;
+    color: rgb(100, 100, 100);
 }
