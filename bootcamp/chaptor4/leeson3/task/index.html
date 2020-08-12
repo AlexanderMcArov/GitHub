@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - for,while,push,pop,shift</title>
+</head>
+<body>
+
+    <script>
+        // Task 9
+
+        let arrayGameOfThrones = ['Targarien','Stark','Lannister','Baratheon','Greyjoi']
+        console.log(arrayGameOfThrones[2]);
+        console.log(`First element: ${arrayGameOfThrones[0]} // Last element: ${arrayGameOfThrones[arrayGameOfThrones.length-1]} `);
+        console.log(arrayGameOfThrones.shift());
+        console.log(arrayGameOfThrones.pop());
+        console.log(arrayGameOfThrones);
+
+        // Task 10
+
+        for(let i = 1; i <= 100; i++) if( i % 2 == 0) console.log(i);
+
+        // Task 11
+
+        let fizzBuzz = []
+        while(fizzBuzz.length < 100) fizzBuzz.push(fizzBuzz.length + 1)
+        console.log(fizzBuzz)
+        for(let i = 0; i < fizzBuzz.length; i++){
+            if(fizzBuzz[i] % 5 == 0 && fizzBuzz[i] % 3 == 0) console.log(fizzBuzz[i] + ' - FizzBuzz');
+            else if(fizzBuzz[i] % 3 == 0) console.log(fizzBuzz[i] + ' - fizz');
+            else if(fizzBuzz[i] % 5 == 0) console.log(fizzBuzz[i] + ' - buzz');
+        }
+
+        // Task 12
+
+        let students = {
+            name: 'Sanya',
+            sClass: 'vL6',
+            age: 24
+        }
+        console.log(students.name);
+
+        // Task 13
+
+        let radius = parseFloat(prompt('Введите радиус окружности:'))
+        let result = {
+            square: 3.14*(radius*radius),
+            perimetr: 2*3.14*radius
+        }
+        alert(`Площадь окружности = ${result.square} \nДлина окружности равна = ${result.perimetr}`)
+
+        // Task 14
+
+        let string = 'dog'
+        let arrString = string.split('')
+        let multiply = []
+        console.log(arrString);
+        for(let i = 0; i == arrString.length;i++){
+            for(let x = 0 ; x < arrString.length;x++){
+                multiply
+            }
+        }
+        console.log(multiply);
+
+
+    </script>
+
+</body>
+</html>

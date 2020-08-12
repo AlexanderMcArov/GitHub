@@ -8,7 +8,6 @@
     background-size: cover;
     background-position: -10px;
     color:white;
-    border: red 2px solid;
 }
 
 .header__title{
@@ -65,7 +64,28 @@
 
  /* CONTENT  */
 .container{
-    flex-wrap: wrap;
+}
+
+.content{
+    padding: 30px 0 30px 0;
+}
+
+.content__title{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 20px 0;
+    text-align: center;
+}
+.content__title h1,h2,h3,h4,h5,h6{
+    margin: 10px 0 10px 0;
+}
+.content__title h1,h4{
+    color: rgb(100,100,100);
+}
+.content__portfolio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .img{
@@ -75,7 +95,6 @@
     height: 350px;
     margin: 5px;
     overflow: hidden;
-    border: red 2px solid;
 }
 
 .img img{
@@ -110,6 +129,8 @@
 }
 
 .img__gradient_title{
+    display: flex;
+    flex-direction: row;
     width: min-content;
     height: min-content;
     padding: 10px;
@@ -120,10 +141,11 @@
 
 .img__gradient_title h4{
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 500;
+    color:white;
 }
 
 .img__gradient:hover{
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     opacity: 1;
 }
