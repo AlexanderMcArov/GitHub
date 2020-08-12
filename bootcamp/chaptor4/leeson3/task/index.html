@@ -52,17 +52,17 @@
 
         // Task 14
 
-        let string = 'dog'
+        let string = 'строка'
         let arrString = string.split('')
         let multiply = []
         console.log(arrString);
-        for(let i = 0; i == arrString.length;i++){
-            for(let x = 0 ; x < arrString.length;x++){
-                multiply
+
+        for(let i = 0; i < arrString.length;i++){
+            for(let x = i; x < arrString.length;x++){  
+                multiply.push(arrString.slice(i,x+1).join(''))
             }
         }
         console.log(multiply);
-
 
     </script>
 
