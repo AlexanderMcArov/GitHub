@@ -90,10 +90,17 @@ console.log(result);
     ["g","h","i"]
   ]
   let str = []
-  let str2 = []
+  let str2 = [] 
+  console.time('FirstStart');
   for(let i = 0; i < matrix3.length;i++){
     str.push(matrix3[i][i])
-    str2.push(matrix3[i][matrix3.length-i-1])
+    str2.push(matrix3[i][matrix3.length-1-i])
   }
+  console.timeEnd('FirstStart');
   console.log(str);
   console.log(str2);
+
+  i = 0
+  while(i<5) console.log(i++);
+
+  console.log('\n');
