@@ -7,26 +7,67 @@
 </head>
 <body>
     <style>
-.block{
-    width: 200px;
-    height: 200px;
-    border: red 2px solid;
-    animation: anim;
-    animation-duration: 5s;
-}
+        body{
+            display: flex;
+            justify-content: center;
+            padding: 200px;
+        }
+        .block1{
+            
+            width: 200px;
+            height: 200px;
+            background-image:url(/bootcamp/chaptor4/lesson4/img/3d-rendering-background-design-colorful-abstract-geometry--8.jpg);
+            background-size: cover;
+            margin: 5px;
+            /* border: red 2px solid; */
+            /* animation: anim;
+            animation-duration: 10s;
+            animation-iteration-count: infinite; */
+            transform: translate3d(150px,0,250px) perspective(500px) rotate3d(0,-1,0,-80deg);
+        }
+        .block2{            
+            width: 200px;
+            height: 200px;
+            background-image:url(/bootcamp/chaptor4/lesson4/img/3d-rendering-background-design-colorful-abstract-geometry--8.jpg);
+            background-size: cover;
+            margin: 5px;
+            /* border: red 2px solid; */
+            /* animation: anim;
+            animation-duration: 10s;
+            animation-iteration-count: infinite; */
+            transform: translate3d(150px,0,250px) perspective(500px) rotate3d(0,0,0,-90deg);
+        }
+        .block3{            
+            width: 200px;
+            height: 200px;
+            background-image:url(/bootcamp/chaptor4/lesson4/img/3d-rendering-background-design-colorful-abstract-geometry--8.jpg);
+            background-size: cover;
+            margin: 5px;
+            /* border: red 2px solid; */
+            /* animation: anim;
+            animation-duration: 10s;
+            animation-iteration-count: infinite; */
+            transform: translate3d(150px,0,250px) perspective(500px) rotate3d(0,0,0,-90deg);
+        }
+        .block4{            
+            width: 200px;
+            height: 200px;
+            background-image:url(/bootcamp/chaptor4/lesson4/img/3d-rendering-background-design-colorful-abstract-geometry--8.jpg);
+            background-size: cover;
+            margin: 5px;
+            border: red 2px solid;
+            animation: anim;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
 
-.block:hover{
-    transform: skewY(80deg);
-}
-@keyframe anim{
-    from{
-        transform: skewX(0deg);
-    }
-    to{
-        
-    }
+@keyframes anim {
+    20%{transform: perspective(500px) rotate3d(0,0,1,0deg);}
+    40%{transform:  perspective(500px) rotate3d(0,0,1,-90deg);}
+    60%{transform:  perspective(500px) rotate3d(0,0,1,-180deg);}
+    80%{transform: perspective(800px) rotate3d(0,0,-1,-270px);}
+    100%{transform: perspective(500px) rotate3d(0,0,-1,-480px);}
 }
     </style>
-    <div class="block"></div>
-</body>
-</html>
+    <div class="block4"></div>
