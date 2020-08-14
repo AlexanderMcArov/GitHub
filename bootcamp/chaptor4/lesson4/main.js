@@ -1,106 +1,34 @@
-// Task #1
-/*
-  перебрать массив matrix1 
-  таким образом,
-  что бы в консоли вышли элементы
-  в алфавитном порядке
-  с помощъю 2 циклов for
-*/
-console.log('// Task 1');
-let matrix1=[
-    ["a","b","c"],
-    ["d","e","f"],
-    ["g","h","i"]
-  ]
+// 4. Есть переменная seasons, если пользователь ввел цифру 1, то выведите
+// сообщение ‘зима’, если 2-’весна’, если 3-лето, 4-осень. Используйте Конструкцию
+// ‘Switch’
 
-for(let i = 0; i < matrix1.length; i++){
-    for(let j = 0; j < matrix1[i].length; j++){
-        console.log(matrix1[i][j]);
-    }
-}
-  
-  // Task #2
-  /*
-    на основе данного двумерного
-    массива создайте новый одномерный
-    к прим: ["a", "b", "c", "d", "e", "f", "g", "h", "i"]
-  */
-  console.log('// Task 2');
-  let matrix2=[
-    ["a","b","c"],
-    ["d","e","f"],
-    ["g","h","i"]
-  ]
+// let seasons = ["Зима","Весна","Лето","Осень"]
 
-let array = []
+// switch(+prompt('Введите цифру')){
+//   case 1: alert(seasons[0])
+//   break;
+//   case 2: alert(seasons[1])
+//   break;
+//   case 3: alert(seasons[2])
+//   break;
+//   case 4: alert(seasons[3])
+//   break;
+// }
 
-for(let i = 0; i < matrix1.length; i++){
-    for(let j = 0; j < matrix1[i].length; j++){
-        array.push(matrix1[i][j])   
-    }
-}
- console.log(array);
-  
-  // Task #3
-  /*
-    на основе массива arr 
-    создайте новый в котором 
-    только гласные буквы
-  */
-console.log('// Task 3');
 
-let arr=["a","b","c","d","e","f","g","h","i"];
-let glasnie_Bukvi = ["a", "e", "i", "o", "u", "y"]
-let result = []
+// alert(seasons[parseInt(prompt('Введите число.'))])
 
-for(let i = 0; i < arr.length; i++){
-    for(let j = 0; j < glasnie_Bukvi.length; j++){
-        if(arr[i] === glasnie_Bukvi[j]){
-            result.push(arr[i])
-        }
-    }
-}
 
-console.log(result);
-  // Task #4
-  /*
-    на основе массива arr 
-    создайте новый в котором 
-    элементы стоят в обратном порядке
-  */
- console.log('// Task 4');
-  let arr2 = ["a","b","c","d","e","f","g","h","i"];
-  console.log(arr2);
-  let arr3 = arr2.reverse()
-  console.log(arr3);
-  
-  // Task #5 **extra
-  /*
-    перебрать массив matrix1 
-    таким образом,
-    что бы в консоли вышли элементы
-    "a", "e", "i"
-    затем:
-    "c","e","g"
-  */
- console.log('// Task 5');
-  let matrix3=[
-    ["a","b","c"],
-    ["d","e","f"],
-    ["g","h","i"]
-  ]
-  let str = []
-  let str2 = [] 
-  console.time('FirstStart');
-  for(let i = 0; i < matrix3.length;i++){
-    str.push(matrix3[i][i])
-    str2.push(matrix3[i][matrix3.length-1-i])
-  }
-  console.timeEnd('FirstStart');
-  console.log(str);
-  console.log(str2);
+// for(let i = 1; i <= 100;i++) i%2==0 ? console.log(i) : i
 
-  i = 0
-  while(i<5) console.log(i++);
+// 8. Дан массив с элементами [1,5,2,3]. С помощью цикла найдите сумму этого
+// массива.
 
-  console.log('\n');
+// let arr = [1,5,2,3]
+// let res = 0;
+// for(let i = 0; i < arr.length; i++) res += arr[i]
+// console.log(res);
+
+
+
+
