@@ -106,3 +106,5 @@ let arr15 = ['php', 'js', 'python','java']
 
 console.log(arr15.shift());
 console.log(arr15.pop());
+
+console.log(__dirname);
