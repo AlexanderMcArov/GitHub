@@ -13,7 +13,9 @@ process.stdin.on('data', inputStdin => {
 });
 
 process.stdin.on('end', _ => {
-    inputString = inputString.trim().split('\n').map(str => str.trim());
+    inputString = inputString.replace(/\s*$/, '')
+        .split('\n')
+        .map(str => str.replace(/\s*$/, ''));
 
     main();
 });
@@ -22,29 +24,39 @@ function readLine() {
     return inputString[currentLine++];
 }
 
-/*
- * Complete the simpleArraySum function below.
- */
-function simpleArraySum(ar) {
+// Complete the countingValleys function below.
+    // n - количество шагов
+    // s - параметры шагов 
     /*
-     * Write your code here.
-     */
-    let sum;
-    for( let i = 0; i < ar.length; i++){
-        sum += ar[i]
+    Вернуть количество полигонов , ниже уровня моря.
+    */
+function countingValleys(n, s) {
+    let lvl = 0;
+    let valley = false;
+    let count = 0;
+    
+    s = s.split('')
+    for(let i = 0; i < s.length;i++){
+        if(s[i] == 'U') lvl++
+        else if(s[i] == 'D') lvl--
+        console.log(lvl);
+        if(lvl < 0) valley = true;
+        else if(lvl == 0 && valley == true){
+            valley = false;
+            count++;
+        }
     }
-    return sum;
-
+    return count;
 }
 
 function main() {
     const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
 
-    const arCount = parseInt(readLine(), 10);
+    const n = parseInt(readLine(), 10);
 
-    const ar = readLine().split(' ').map(arTemp => parseInt(arTemp, 10));
+    const s = readLine();
 
-    let result = simpleArraySum(ar);
+    let result = countingValleys(n, s);
 
     ws.write(result + "\n");
 
