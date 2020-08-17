@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 console.log('./main.js');
 
 let task = 1;
