@@ -104,7 +104,6 @@ console.log(getNumbers(20,-20));
 //     return `rgb(${a},${b},${c})`
 // }
 // console.log(rgb(+prompt('Введите первое число:'),+prompt('Введите второе число:'),+prompt('Введите число число:')));
-=======
 // let num1 = 50;
 // let num3 = 10;
 
