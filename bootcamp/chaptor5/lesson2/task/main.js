@@ -23,10 +23,10 @@ alert(fibonachi(prompt('Цисло Фибоначи: ')))
 // Напишите функцию которая перебирает массив через рекурсию
 
 function bruteForceArray(arr){
-    sum = arr.shift();
+    let sum = arr.shift();
     console.log(sum);
     if(arr.length > 0) return bruteForceArray(arr)
-    return sum
+    else return sum
 }
 let brutearray = [1,2,3,4,5,6,7]
 bruteForceArray(brutearray)
@@ -37,7 +37,7 @@ bruteForceArray(brutearray)
 // четвёртая делит на 2
 
 console.log('Массив из 4х функций');
-function fourDragon(a){
+function fourDragon(){
     let count = 0;
 
     return [function(){

@@ -1,55 +1,53 @@
-// 'use strict';
+'use strict';
 
-// const fs = require('fs');
+const fs = require('fs');
 
-// process.stdin.resume();
-// process.stdin.setEncoding('utf-8');
+process.stdin.resume();
+process.stdin.setEncoding('utf-8');
 
-// let inputString = '';
-// let currentLine = 0;
+let inputString = '';
+let currentLine = 0;
 
-// process.stdin.on('data', inputStdin => {
-//     inputString += inputStdin;
-// });
+process.stdin.on('data', inputStdin => {
+    inputString += inputStdin;
+});
 
-// process.stdin.on('end', _ => {
-//     inputString = inputString.replace(/\s*$/, '')
-//         .split('\n')
-//         .map(str => str.replace(/\s*$/, ''));
+process.stdin.on('end', _ => {
+    inputString = inputString.replace(/\s*$/, '')
+        .split('\n')
+        .map(str => str.replace(/\s*$/, ''));
 
-//     main();
-// });
+    main();
+});
 
-// function readLine() {
-//     return inputString[currentLine++];
-// }
+function readLine() {
+    return inputString[currentLine++];
+}
 
-// // Complete the alternatingCharacters function below.
-let s =[ 
-    'AAAA',
-    'BBBBB',
-    'ABABABAB',
-    'BABABA',
-    'AAABBB'
-];
-let nt = s.length;
-// function alternatingCharacters(s) {
+// Complete the alternatingCharacters function below.
 
-//     for()
-// }
-// alternatingCharacters(s);
-// function main() {
-//     const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
+function alternatingCharacters(s) {
+    let count = 0
+    s.split('')
+    for(let i = 1; i < s.length; i++){        
+        if(s[i-1] == s[i]) count++
+    }
+    return count
+}
 
-//     const q = parseInt(readLine(), 10);
 
-//     for (let qItr = 0; qItr < q; qItr++) {
-//         const s = readLine();
+function main() {
+    const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
 
-//         let result = alternatingCharacters(s);
+    const q = parseInt(readLine(), 10);
 
-//         ws.write(result + "\n");
-//     }
+    for (let qItr = 0; qItr < q; qItr++) {
+        const s = readLine();
 
-//     ws.end();
-// }
+        let result = alternatingCharacters(s);
+
+        ws.write(result + "\n");
+    }
+
+    ws.end();
+}
