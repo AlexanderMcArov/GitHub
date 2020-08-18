@@ -9,12 +9,7 @@ function factorial(number){
     return number > 0 ? number * factorial(number-1) : 1
 }
 
-console.log(factorial(0));
-console.log(factorial(1));
-console.log(factorial(2));
-console.log(factorial(3));
-console.log(factorial(4));
-console.log(factorial(5));
+alert(factorial(prompt('Введите чилос, чтобы найти его факториал: ')))
 
 // Напишите функцию которая возвращает n число по порядку чисел Фибоначчи (Рекурсия)
 
@@ -23,7 +18,7 @@ function fibonachi(n = 3){
     else return fibonachi(n-1) + fibonachi(n-2)
 }
 
-console.log('Fibonachi - ' + fibonachi(15));
+alert(fibonachi(prompt('Цисло Фибоначи: ')))
 
 // Напишите функцию которая перебирает массив через рекурсию
 
