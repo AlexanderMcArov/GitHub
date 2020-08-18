@@ -1,6 +1,7 @@
 // Напишите функцию которая принимает число и возвращает его факториал используя рекурсию. 
 // 	Факториал числа - это умножение всех порядковых чисел от 1 до самого числа:
-	
+
+
 // 	5! = 1*2*3*4*5 = 5*4*3*2*1
 // 	6! = 1*2*3*4*5*6 = 6*5*4*3*2*1
 
@@ -76,14 +77,19 @@ console.log(counter[1]());
 
 // func(5)///101
 // func(6)///110
-// func(1234321)///100101101010110010001
+// func(1234321)///
 
-function toBinnaryCode(n){
-    let res = ''
-    res += n % 2
-    if(n / 2 == 1 && n % 2 == 0) return res
-    else return toBinnaryCode(n / 2)
+
+console.log('Task toBinaryCode');
+
+function toBinnaryCode(n,result = []){    
+    result.unshift(parseInt(n % 2)) 
+    return n <= 2 ? result.join('') : toBinnaryCode(n / 2,result)
 }
 
-console.log(toBinnaryCode(5));
+alert(toBinnaryCode(parseInt(prompt('Введите число, для переведения его в двоичный код:'))));
+
+
+
+
 
