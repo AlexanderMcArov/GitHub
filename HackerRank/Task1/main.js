@@ -25,26 +25,20 @@ function readLine() {
 }
 
 // Complete the countingValleys function below.
-    // n - количество шагов
-    // s - параметры шагов 
-    /*
-    Вернуть количество полигонов , ниже уровня моря.
-    */
+
 function countingValleys(n, s) {
     let lvl = 0;
     let valley = false;
     let count = 0;
-    
-    s = s.split('')
-    for(let i = 0; i < s.length;i++){
+
+    for(let i = 0; i < n;i++){
         if(s[i] == 'U') lvl++
         else if(s[i] == 'D') lvl--
-        console.log(lvl);
         if(lvl < 0) valley = true;
-        else if(lvl == 0 && valley == true){
+        if(valley && lvl == 0){
             valley = false;
             count++;
-        }
+        } 
     }
     return count;
 }

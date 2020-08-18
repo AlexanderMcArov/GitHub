@@ -22,9 +22,9 @@ hello2(prompt('Введите имя:'));
 
 taskCount(); // 3
 function rgb(r = 0, g = 0, b = 0){
-    console.log(`rgb(${r},${g},${b})`);
+    return `rgb(${r},${g},${b})`
 }
-rgb();
+console.log(rgb(22,22,22));
 
 taskCount(); // 4
 function countryName(countries){
@@ -67,7 +67,7 @@ function getCountSymbol(string,symbol){
     for(let i = 0; i < string.length;i++){
         if(string[i] == symbol) count++;
     }
-    return `Количество '${symbol}' - ${count}`;
+    return `Количество символов '${symbol}' в строке '${string.join('')}' = ${count}`;
 }
 console.log(getCountSymbol('строкаполавыоплавоплаволп','о'));
 
@@ -77,16 +77,23 @@ function factorial(number){
     for(let i = 1; i <= number; i++){
         numberSumm *= i;
     }
-    return numberSumm
+    return number > 0 ? numberSumm : 1
 }
 console.log('Factorial - ' + factorial(5));
 
 taskCount(); // 7
 function getNumbers(x,y){
     let arr = []
-    for(let i = x; i <= y; i++){
-        arr.push(i)
+    if(x > y){
+        for(let i = x; i >= y; i--){
+            arr.push(i)
+        }
+    }else{
+        for(let i = x; i <= y; i++){
+            arr.push(i)
+        }
     }
+        
     return arr
 }
 console.log(getNumbers(20,-20));
