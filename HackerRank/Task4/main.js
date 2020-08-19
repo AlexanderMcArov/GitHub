@@ -49,17 +49,26 @@
 let s = [
     '{[()]}',
     '{[(])}',
-    '{{[[(())]]}}'
+    '{(([])[])[]}{'
 ]
 
-function isBalanced(s) {
+function isBalanced(s){
     s = s.split('')
-    let res;
-    while(s.length > 1){
-        if(s.shift() == s.pop()) console.log(s);
-        s.reverse()
-        console.log(s);
-    }
+    let len = s.length 
+    let arrOpenBrackets = [] 
+    // if((len % 2) != 0 ) return 'NO'
+    for(let i = 0; i < len; i++){
+            if(s[i] == '{' || s[i] == '[' || s[i] == '(') arrOpenBrackets.push(s[i])  
+            else if(s[i] == '}'){
+                if(arrOpenBrackets[arrOpenBrackets.length-1] == '{') arrOpenBrackets.pop()                               
+            }else if(s[i] == ']'){
+                if(arrOpenBrackets[arrOpenBrackets.length-1] == '[') arrOpenBrackets.pop()                
+            }else if(s[i] == ')'){
+                if(arrOpenBrackets[arrOpenBrackets.length-1] == '(') arrOpenBrackets.pop()                 
+            }   
+        }      
+    return arrOpenBrackets.length != 0 ? 'NO' : 'YES'
 }
 
-isBalanced(s[0])
+console.log(isBalanced(s[2]));
+

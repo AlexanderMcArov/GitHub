@@ -21,12 +21,12 @@ function fibonachi(n = 3){
 alert(fibonachi(prompt('Цисло Фибоначи: ')))
 
 // Напишите функцию которая перебирает массив через рекурсию
-
+console.log('Перебор массива ')
 function bruteForceArray(arr){
     let sum = arr.shift();
     console.log(sum);
     if(arr.length > 0) return bruteForceArray(arr)
-    else return sum
+    return ''
 }
 let brutearray = [1,2,3,4,5,6,7]
 bruteForceArray(brutearray)
@@ -79,12 +79,8 @@ console.log('Task toBinaryCode');
 
 function toBinnaryCode(n,result = []){    
     result.unshift(parseInt(n % 2)) 
-    return n <= 2 ? result.join('') : toBinnaryCode(n / 2,result)
+    return n <= 1 ? result.join('') : toBinnaryCode(parseInt(n / 2),result)
 }
 
+
 alert(toBinnaryCode(parseInt(prompt('Введите число, для переведения его в двоичный код:'))));
-
-
-
-
-
