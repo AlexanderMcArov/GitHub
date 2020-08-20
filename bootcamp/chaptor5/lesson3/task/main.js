@@ -21,9 +21,8 @@ fourth(parseInt(prompt('Введите число от 0 до 59:')));
 // Функция принимает количество часов (проверить что это число). Функция возвращает
 // количество секунд в переданых часах.
 
-function secondsInHours(hours){
-    hours = parseInt(hours)
-    return `В ${hours} часах, находится ${hours*60*60} секунд.`
+function secondsInHours(hours){    
+    return !isNaN(hours) ? hours * 3600 : 'Неверные данные.'
 }
 
 alert(secondsInHours(+prompt('Введите количество часов')))
@@ -41,6 +40,7 @@ function remainder(first, second){
 }
 
 alert(remainder(prompt('Делится ли первое число без остатка на второе?\nВведите первое число:'),prompt('Введите второе число:')))
+
 // Task 4
 
 // Необходимо создать объект, который будет представлять из себя лифт. У него
@@ -55,15 +55,13 @@ alert(remainder(prompt('Делится ли первое число без ос�
 
 let lift = {
     nFloor: 1,
-    toFloor(floor){
-        this.printFloor()
+    toFloor(floor){        
         if(floor > 16 || floor < 1){
             console.log('Значения этажей должны быть в диапазоне от 1 до 16');
-        }else 
-        if(this.nFloor == floor){
-            console.log('Вы уже, на этом этаже.');
-            toFloor(floor)
+        }else if(this.nFloor == floor){
+            console.log('Вы уже, на этом этаже.');            
         }else{
+            this.printFloor()
             while(this.nFloor != floor){
                 if(this.nFloor > floor) lift.downOneFloor()
                 else lift.upOneFloor()
@@ -74,14 +72,14 @@ let lift = {
         return console.log(`Вы сейчас на ${lift.nFloor} этаже.`);
     },
     upOneFloor(){
-        if(this.nFloor == 16) console.log('Нельзя подняться выше 16 этажа подняться.');
+        if(this.nFloor == 16) console.log('Нельзя подняться выше 16-го этажа подняться.');
         else{
             this.nFloor += 1
             this.printFloor()
         } 
     },
     downOneFloor(){
-        if(this.nFloor == 1) console.log('Нельзя спуститься ниже 1 этажа.');
+        if(this.nFloor == 1) console.log('Нельзя спуститься ниже 1-го этажа.');
         else{
             this.nFloor -= 1
             this.printFloor()           
@@ -108,4 +106,9 @@ let lift = {
 // lift.downOneFloor()
 // lift.downOneFloor()
 // lift.downOneFloor()
+lift.toFloor(5)
+lift.toFloor(5)
+lift.toFloor(5)
+lift.toFloor(5)
+lift.toFloor(5)
 lift.toFloor(5)
