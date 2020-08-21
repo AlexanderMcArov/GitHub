@@ -44,9 +44,8 @@ function checkdLdR(){
         if(sumAxes[key] < check) check = key      
     }
     if(check == 'diagonal_LR'){
-        
+        // check
     }
     console.log('Check');
     console.log(check);
-    printlog()
 }
