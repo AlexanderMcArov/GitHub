@@ -32,6 +32,7 @@ function rotLeft(a, d) {
     }
     return a
 }
+
 function main() {
     const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
 
