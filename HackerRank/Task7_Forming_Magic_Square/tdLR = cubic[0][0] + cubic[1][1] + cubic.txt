@@ -1,0 +1,29 @@
+tdLR = cubic[0][0] + cubic[1][1] + cubic[2][2]
+tdRL = cubic[0][2] + cubic[1][1] + cubic[2][0]
+
+row[0] = cubic[0][0] + cubic[0][1] + cubic[0][2]
+row[1] = cubic[1][0] + cubic[1][1] + cubic[1][2]
+row[2] = cubic[2][0] + cubic[2][1] + cubic[2][2]
+
+col[0] = cubic[0][0] + cubic[1][0] + cubic[2][0]
+col[1] = cubic[0][1] + cubic[1][1] + cubic[2][1]
+col[2] = cubic[0][2] + cubic[1][2] + cubic[2][2]
+
+cubic[0][0] => col[0] , row[0] , dLR
+cubic[0][1] => col[1] , row[0]
+cubic[0][2] => col[2] , row[0] , dRL
+cubic[1][0] => col[0] , row[1]
+cubic[1][1] => col[0] , row[0] , dLR , dRL
+cubic[1][2] => col[2] , row[1]
+cubic[2][0] => col[0] , row[2] , dRL
+cubic[2][1] => col[1] , row[2]
+cubic[2][2] => col[0] , row[0] , dLR
+
+
+let count = [1,14,21,20,16,18,17,18,21,19,21,20,23]
+
+
+
+
+
+
