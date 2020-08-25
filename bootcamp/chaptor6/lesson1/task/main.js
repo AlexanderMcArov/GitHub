@@ -7,7 +7,7 @@
 let arr1 = ['Молоко',77,11,'Мед',-88]
 function typeArr(arr){
     arr.forEach(item => {
-        console.log('Task 1 ', item,typeof(item));
+        !isNaN(item) ? console.log(item,'Число') : console.log(item,'Не число')
     });
 }
 
@@ -25,7 +25,7 @@ function maxItem(arr){
     return max
 }
 
-console.log('Task 2',maxItem(arr2));
+console.log('Task 2',maxItem(arr2))
 
 // //Task 3
 // Напишите функцию, определяющую количество максимальных элементов в массиве.
@@ -114,3 +114,12 @@ function getSubArray(arr){
 }
 
 console.log('Task 7',getSubArray(arr7));
+
+
+function arrt(){
+    return [1,2,3,4]
+}
+
+arrt().filter((item,index,array) => {
+    console.log(array);
+})
