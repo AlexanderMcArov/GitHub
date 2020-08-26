@@ -16,142 +16,71 @@ cubic[8] => col[0] , row[0] , dLR
 найти суммы строк столбцов по элемнтам
 результаты сложения по модулям пушить в новый массив
 нужно узнать только разницу между двумя квадратами(массивами).
+a+ b	a + 2b + 2c	a + c
+a + 2c	a + b + c	a + 2b
+a + 2b + c	a	a + b + 2c
 
 
 
 */
-let cubic = [ [ 4, 8, 2 ], [ 4, 5, 7 ], [ 6, 1, 6 ] ]
-let cost = 0
-if(cubic[1][1] != 5){
-    cost = Math.abs(cubic[1][1] - 5)
-    cubic[1][1] = 5
-}
-cubic = cubic.flat()
-let dLR = 0
-let dRL = 0
-let row = []
-let col = []
-function calcSum(){
-    dLR = cubic[0] + cubic[4] + cubic[8]
-    dRL = cubic[2] + cubic[4] + cubic[6]
-    col = [
-        cubic[0] + cubic[3] + cubic[6],
-        cubic[1] + cubic[4] + cubic[7],
-        cubic[2] + cubic[5] + cubic[8]
-    ]
-    row = [
-        cubic[0] + cubic[1] + cubic[2],
-        cubic[3] + cubic[4] + cubic[5],
-        cubic[6] + cubic[7] + cubic[8]
-    ]
-}
-calcSum()
-function loop(){
-    if(col[2] == 16 && row[2] == 16){
-        cubic[8]--
-        cost--
-    }
-    if(dLR < 15){
-        if(col[0] + row[0] > col[2] + row[2]){
-            cubic[8]++
-            cost++
-        }else if(col[0] + row[0] < col[2] + row[2]){
-            cubic[0]++
-            cost++
-        }
-    }else if(dLR > 15){
-        if(col[0] + row[0] > col[2] + row[2]){
-            cubic[8]--
-            cost--
-        }else if(col[0] + row[0] < col[2] + row[2]){
-            cubic[0]--
-            cost--
-        } // RL
-    }else if(dRL < 15){
-        if(col[2] + row[0] > col[0] + row[2]){
-            cubic[2]++
-            cost--
-        }else if(col[2] + row[0] < col[0] + row[2]){
-            cubic[6]++
-            cost--
-        }
-    }else if(dRL > 15){
-        if(col[2] + row[0] > col[0] + row[2]){
-            cubic[2]--
-            cost--
-        }else if(col[2] + row[0] < col[0] + row[2]){
-            cubic[6]--
-            cost--
-        }
-    }else if(row[0] < 15){
-        cubic[1]++
-        cost++
-    }else if(row[0] > 15){
-        cubic[1]--
-        cost--
-    }else if(row[1] > 15){
-        if(col[0] < col[2]){
-            cubic[5]--
-            cost--
-        }else if(col[0] > col[2]){
-            cubic[3]--
-            cost--
-        }
-    }else if(row[1] < 15){
-        if(col[0] < col[2]){
-            cubic[3]++
-            cost++
-        }else if(col[0] > col[2]){
-            cubic[5]++
-            cost++
-        }
-    }else if(row[2] > 15){
-        cubic[7]--
-        cost--
-    }else if(row[2] < 15){
-        cubic[7]++
-        cost++
-    }else if(col[0] > 15){
-        if(row[2] == 15){
+// let cubic = [ [ 4, 5, 8], [ 2, 4, 1 ], [ 1, 9, 7 ] ]
+// let cubic = [ [ 4, 8, 2 ], [ 4, 5, 7 ], [ 6, 1, 6 ] ]		
 
-        }
-        cubic[6]--
-        cost--
-    }else if(col[0] < 15){
-        cubic[6]++
-        cost++
-    }else if(col[2] > 15){
-        cubic[8]--
-        cost--
-    }else if(col[2] < 15){
-        cubic[8]++
-        cost++
-    }else{
-        let max_elem = 0
-        console.log('Нет условия');
-        for(let i = 0; i < cubic.length;i++){
-            if(max_elem < cubic[i]) max_elem = cubic[i]
-            cubic[i] -= 2
-            cost -= 2
-            console.log('Удалили' + i);
-        }
-    }
-    calcSum()
-    if(dRL > 15){
-        cubic[2]--
-        cost--
-    }else if(dLR > 15){
-        cubic[0]--
-        cost--
-    }
-    console.log(dRL);
-    console.log(dLR);
-    console.log(row);
-    console.log(col);
-    console.log(cubic);
-    console.log(cost);
+// let cost = [0,0,0]
+
+
+// function getCubic(a = 1,b = 3,c = 1) {
+//     let magicCubic = [
+//         [a + b, a + 2 * b + 2 * c, a + c],[a + 2 * c, a + b + c, a + 2 * b],[a + 2 * b + c, a, a + b + 2 * c]
+//     ]
+
+//     return magicCubic
+// }
+
+// console.log(getCubic());
+
+// for(let i = 0; i < cubic.length; i++){
+//     for(let j = 0; j < cubic[i].length; j++){
+//         cost[0] += (Math.abs(getCubic(1,1,3)[i][j] - cubic[i][j]))
+//         cost[1] += (Math.abs(getCubic(1,3,1)[i][j] - cubic[i][j]))
+//         cost[2] += (Math.abs(getCubic(3,1,1)[i][j] - cubic[i][j]))
+//     }
+// }
+// cost.sort((a,b) => a - b)
+// console.log(cost);
+
+
+let cubic = [ [ 4, 5, 8], [ 2, 4, 1 ], [ 1, 9, 7 ] ]	
+
+let cost = [0,0,0,0,0,0,0,0,0]
+
+
+function getCubic(a = 1,b = 3,c = 1) {
+    let magicCubic = [
+        [a + b, a + 2 * b + 2 * c, a + c],[a + 2 * c, a + b + c, a + 2 * b],[a + 2 * b + c, a, a + b + 2 * c],
+        [a + 2 * b + c, a, a + b + 2 * c],[a + 2 * c, a + b + c, a + 2 * b],[a + b, a + 2 * b + 2 * c, a + c],
+        [a + 2 * b + c, a, a + a + 2 * c],[a + b + 2 * c, a + b + c, a + 2 * b + c],[a + b, a + 2 * b + 2 * c, a + c],
+        [a + b + 2 * c, a, a + 2 * b + c],[a + 2 * b, a + b + c, a + 2 * c],[a + c, a + 2 * b + 2 * c, a + b]
+    ]
+
+    return magicCubic
 }
 
-while(dRL + dLR + row[0] + row[1] + row[2] + col[0] + col[1] + col[2] != 120){
-    loop()
+console.log(getCubic());
+
+
+for(let i = 0; i < 3; i++){
+    for(let j = 0; j < 3; j++){
+            cost[0] += (Math.abs(getCubic(1,1,3)[i][j] - cubic[i][j]))
+            cost[1] += (Math.abs(getCubic(1,3,1)[i][j] - cubic[i][j]))
+            cost[2] += (Math.abs(getCubic(3,1,1)[i][j] - cubic[i][j]))
+            cost[3] += (Math.abs(getCubic(1,1,3)[i+1][j] - cubic[i][j]))
+            cost[4] += (Math.abs(getCubic(1,3,1)[i+2][j] - cubic[i][j]))
+            cost[5] += (Math.abs(getCubic(3,1,1)[i+3][j] - cubic[i][j]))
+            cost[6] += (Math.abs(getCubic(1,1,3)[i+4][j] - cubic[i][j]))
+            cost[7] += (Math.abs(getCubic(1,3,1)[i+5][j] - cubic[i][j]))
+            cost[8] += (Math.abs(getCubic(3,1,1)[i+6][j] - cubic[i][j]))
+    }
 }
+
+console.log(cost);

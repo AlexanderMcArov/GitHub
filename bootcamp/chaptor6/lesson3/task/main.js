@@ -25,11 +25,12 @@ console.log('Task 2',firstName2,lasName2);
 // в свойство firstName первое слово
 // в свойство lastName второе слово
 
+let [,lastName] = arr1
 let obj = {
     firstName: firstName,
-    titul: titul
+    lastName: lastName
 }
-console.log('Task 3',obj.firstName,obj.titul);
+console.log('Task 3',obj.firstName,obj.lastName);
 
 // Task 4
 // Создайте переменную let a = 0  и let b = 1
