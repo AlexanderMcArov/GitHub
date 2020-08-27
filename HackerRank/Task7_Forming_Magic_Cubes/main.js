@@ -74,12 +74,6 @@ for(let i = 0; i < 3; i++){
             cost[0] += (Math.abs(getCubic(1,1,3)[i][j] - cubic[i][j]))
             cost[1] += (Math.abs(getCubic(1,3,1)[i][j] - cubic[i][j]))
             cost[2] += (Math.abs(getCubic(3,1,1)[i][j] - cubic[i][j]))
-            cost[3] += (Math.abs(getCubic(1,1,3)[i+1][j] - cubic[i][j]))
-            cost[4] += (Math.abs(getCubic(1,3,1)[i+2][j] - cubic[i][j]))
-            cost[5] += (Math.abs(getCubic(3,1,1)[i+3][j] - cubic[i][j]))
-            cost[6] += (Math.abs(getCubic(1,1,3)[i+4][j] - cubic[i][j]))
-            cost[7] += (Math.abs(getCubic(1,3,1)[i+5][j] - cubic[i][j]))
-            cost[8] += (Math.abs(getCubic(3,1,1)[i+6][j] - cubic[i][j]))
     }
 }
 

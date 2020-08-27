@@ -1,8 +1,8 @@
-// const str = 'Привет всем, меня зовут Саня. Мне 24 года. Я живу в городе 1 Бишкек.'
-// const regex = /Саня/
-// const result = str.match(regex)
-// console.log(result[0]);
-// //
+const str = 'Привет всем, меня зовут Саня. Мне 24 года. Я живу в городе 1 Бишкек.'
+const regex = /Саня/
+const result = str.match(regex)
+console.log('regex',result[0]);
+//
 // const str2 = 'Привет всем, меня зовут Саня. Мне 24 года. Я живу в городе 12 Бишкек.'
 // const regex2 = /\d\d/g
 // const result2 = str2.match(regex2)
@@ -18,10 +18,10 @@
 // const result4 = str4.match(regex4)
 // console.log(result4);
 // //
-// const str5 = 'Привет всем, меня зовут Саня. Мне 24 года. Я живу в городе 12 Бишкек.'
-// const regex5 = /\D\D\D\D\D/
-// const result5 = str5.match(regex5)
-// console.log(result5);
+const str5 = 'Привет всем, меня зовут Саня. Мне 24 года. Я живу в городе 12 Бишкек.'
+const regex5 = /\d\d/ 
+const result5 = str5.match(regex5)
+console.log(result5);
 // //
 // const str6 = 'К нам пришли Оля и Эля в гости. А Юля не смогла.'
 // const regex6 = /[ОЭ]ля/g
@@ -63,9 +63,9 @@
 // // const result13 = str13.match(pattern13)
 // // console.log(result13);
 // //
-const str14 = prompt('Вес товара: ')
-const pattern14 = new RegExp(/.+@.+\..+/,'gi')  
-// const result14 = str14.match(pattern14)
+const str14 = prompt('Введите email.com ')
+const pattern14 = new RegExp(/.+@.+\..+/,'g i')  
+const result14 = str14.match(pattern14)
 console.log(pattern14.test(str14));
 
 

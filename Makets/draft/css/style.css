@@ -5,12 +5,13 @@ body{
 .container{
     display: flex;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .header{
     background-image: url(../img/fon1.jpg);
     background-size: cover;
+    color:white
 }
 
 .header__content{

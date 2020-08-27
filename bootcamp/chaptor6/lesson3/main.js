@@ -206,3 +206,7 @@ window.avto = function auto(a) {
     return a
 }
 console.log(Aktan,Kubat,Aleksandr);
+
+function setName(a) {
+    return a
+}

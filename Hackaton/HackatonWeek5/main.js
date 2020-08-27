@@ -10,7 +10,7 @@ console.log('Hackaton Week5');
 // }
 // console.log(sub(10,4,2))
 
-//#3
+// #3
 // let n = 1000
 // let count = 0
 // while(n > 50){
