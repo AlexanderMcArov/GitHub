@@ -1,0 +1,98 @@
+.testbr{
+    border: red 2px solid;
+}
+
+.header_gradient{
+    display: flex;
+    padding: 20px 0px 20px 0px;
+    border-top: #d4a777 2px solid;
+    border-bottom: #d4a777 2px solid;
+}
+
+.header{
+    display: flex;   
+    justify-content: center;
+    color: #b76e22;
+    margin-top: 50px;       
+}
+
+/* .header_photo{
+
+} */
+
+.header_content{
+    width: 400px;
+    margin: 0px 0px 0px 40px;
+    padding: 0px 10px 5px 30px;
+    border-top: #d4a777 2px solid;
+}
+
+.header_about{
+    padding: 10px 0px 5px 0px;
+    border-top: #d4a777 2px solid;
+}
+
+.header_contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: #d4a777 2px solid;
+    padding: 10px 0px 10px 0px;
+}
+
+.contact_item{
+    text-align: center;
+    margin: 10px 10px 0px 10px;
+}
+
+.contact_item img{
+    width: 15px;
+}
+
+.contact_item a{
+    color: #b76e22;
+    outline: none;
+    text-decoration:none;
+}
+
+.item_text{
+    margin: 10px 0px 0px 0px;
+}
+
+.header_adress{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-top: #d4a777 2px solid;
+    padding: 10px 0px 10px 0px;
+}
+
+.adress_text{
+    margin: 0px 0px 0px 10px;
+}
+
+.header_adress img{
+    width: 15px;
+}
+
+/* /Header  */
+
+/* Work Expirence */
+
+.info_list{    
+    display: flex; 
+    justify-content: center;  
+}
+
+.info_content{
+    width: 750px;
+    flex-direction: column;
+}
+
+.info_list_title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* /Work Expirence */
