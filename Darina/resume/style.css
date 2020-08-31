@@ -92,7 +92,7 @@
 .info_list_title{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 /* /Work Expirence */
