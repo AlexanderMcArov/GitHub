@@ -49,3 +49,17 @@ list_row[1].classList.remove('row')
 // console.log(list_a);
 // list_a[1].style.color = '#ff0000'
 console.log(list_a[1].style.color);
+
+console.log(list_strong[0].style.color);
+function togglefon() {
+    for (let i = 0; i < list_strong.length; i++) {
+        let a = list_strong[i].style
+        if(a.color == 'rgb(0, 255, 0)'){
+            a.color = '#ff00ff'
+        }else if(a.color == 'rgb(255, 0, 255)'){
+            a.color = '#00ff00'
+        }       
+    }
+}
+setInterval(togglefon,1000)
+togglefon()
