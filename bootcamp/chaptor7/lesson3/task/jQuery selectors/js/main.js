@@ -28,3 +28,4 @@ $('strong').toggleClass('some')
 $($('.row')[1]).removeClass('row')
 // 8)
 console.log($('a').css('color'));
+
