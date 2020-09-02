@@ -47,8 +47,9 @@ list_row[1].classList.remove('row')
 
 // 7)
 // console.log(list_a);
-// list_a[1].style.color = '#ff0000'
-console.log(list_a[1].style.color);
+let a = document.getElementsByTagName('a')
+a[1].style.color = '#ff0000'
+console.log(a[1].style.color);
 
 console.log(list_strong[0].style.color);
 function togglefon() {
