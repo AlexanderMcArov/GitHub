@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 50px;
+            height: 50px;
+            border: red 2px solid;
+        }
+        .col{
+            display: flex;
+            flex-direction: column;
+        }
+        .row{
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1 style='display: none;'> Вы можете пройти дальше. </h1>
+    <h1 id='title'>Hello World</h1>
+    <h2 class="welcome">Welcome</h2>
+    <h3 class="title">Title</h3>
+    <input type="text" name="inp-name">
+    <a href="#">link_COLOR</a>
+    <div class="center">Center DIV</div>
+    <div class="container"></div> -->
+    
+    <div class="col">
+        <div class="row">
+            <button onclick="summ()" class="summ">1</button>
+            <button onclick="divv()" class="divv">2</button>
+            <button onclick="deff()" class="deff">3</button>
+            <button onclick="deff()" class="deff">SUMM</button>
+            <button onclick="deff()" class="deff">DEF</button>
+        </div>
+        <div class="row">
+            <button onclick="summ()" class="summ">4</button>
+            <button onclick="divv()" class="divv">5</button>
+            <button onclick="deff()" class="deff">6</button>
+            <button onclick="deff()" class="deff">DIV</button>
+            <button onclick="deff()" class="deff">MULTI</button>
+        </div>
+        <div class="row">
+            <button onclick="summ()" class="summ">7</button>
+            <button onclick="divv()" class="divv">8</button>
+            <button onclick="deff()" class="deff">9</button>
+        </div>
+    </div>
+
+    <!-- <button onclick="summ()" class="summ">SUMM</button>
+    <button onclick="divv()" class="divv">DIVV</button>
+    <button onclick="deff()" class="deff">DEFF</button>
+    <button onclick="multy()" class="multi">MULTI</button> -->
+
+    <script src="jquery-min-3.5.1.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
