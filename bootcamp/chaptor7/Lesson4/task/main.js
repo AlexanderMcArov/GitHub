@@ -148,11 +148,25 @@ function clearbook() {
     update_book = true
 }
 
-let drag = document.querySelectorAll('div.drag')
+let drag = document.querySelectorAll('.drag')
+let mousemove = false
 console.log(drag);
-drag = Object.keys(drag);
-for(let key in drag){
-    window[drag[key]] = drag[key].addEventListener('mouseenter',()=>{
-        console.log(key);
+drag.forEach((item,index) =>{
+    item.innerText = 'Ты можешь двигать меня мышкой :)'
+    console.log(item);
+    item.style.zindex = `${index + 1}`
+    item.addEventListener('mouseenter',()=>{
+        console.log('Работает');
+        item.addEventListener('mousedown',()=> mousemove = true)
+        item.addEventListener('mouseup',()=> mousemove = false) 
+        item.addEventListener('mousemove',()=>{
+            if(mousemove){
+                item.style.position = 'absolute'
+                item.style.left = event.clientX - 100 + 'px'
+                item.style.top = event.clientY - 100 + 'px'
+            }
+        })
+        
     })
-}
+})       
+        
