@@ -8,24 +8,47 @@
         .modalButtons{
             display: flex;
             justify-content: flex-end;
-            border-top: rgb(200, 200, 200) 2px solid;
             padding: 20px 20px 20px 0px;
         }
         .modalWindow{
-            display: block;
+            display: block; 
             position: absolute;
-            background-color: rgb(230, 230, 230);
-            padding: 10px 10px 10px 10px;
-            left: 50%;
-            top: 0.1%;
+            top:0;
+            left:0;
+            background-color: rgba(0, 0, 0, .65);
             z-index: 10;
-            width: 400px;
-            border: rgb(200, 200, 200) 2px solid;
-            border-radius: 0.3em;
+            width: 100%;
+            height: 100%;
+            transition: all 0.5s;
+        }
+        .container{
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        }
+        .modal_box{
+            width: 0px;
+            height: min-content;
+            overflow: hidden;
+            background: indigo ;
+            color: white;
+            border-radius: 15px;
+            padding: 15px 20px 15px 20px;
+            opacity: 0;       
         }
         .modalContent{
-            border-top: rgb(200, 200, 200) 2px solid;
-            height: 50px;
+            padding: 10px 10px 10px 10px;
+            font-size: 20px;
+            border-radius: 15px;
+            background: khaki;
+            color: black;
+            border-top: silver 2px solid;
+            border-bottom: silver 2px solid;
+        }
+        .modalTitle{
+            text-align: center;            
         }
         .btn_close{
             background: white;
@@ -36,7 +59,7 @@
             font-weight: 300;
             margin: 0px 5px 0px 0px;
         }
-        .btn_save{
+        .btn_sub{
             background: DodgerBlue;
             border: DodgerBlue 1px solid;
             padding: 5px 10px 5px 10px;
@@ -47,24 +70,57 @@
             margin: 0px 5px 0px 0px;
         }
         .localBook{
-            position: relative;
             width: 600px;
-            height: 800px;
-            background: black;
-            color:white;
+            height: min-content;
+            padding: 15px 15px 15px 15px;
+            border-radius: 15px;
+            background-color: palegreen;
+            margin-top: 20px;
+            overflow: hidden;
         }
-        .modal_grad{
-            background: rgba(0, 0, 0, 0.7);
+        .book_title{
+            width: 100%;
+            height: min-content;
+            background-color: palevioletred;
+            border-radius: 15px;
+            padding: 15px 15px 15px 15px;
+            color: black;
+            font-weight: 600;
+            font-size: 20px;
+        }
+        .book_content{
+            width: 100%;
+            height: min-content;
+            margin-top: 10px;
+            background-color: palevioletred;
+            border-radius: 15px;
+            padding: 15px 15px 15px 15px;
+            color: black;
+            font-weight: 600;
+            font-size: 20px;
+        }
+        .book_item{
+            padding: 5px 5px 5px 5px;
+            border: white 1px solid;
+            margin: 5px;
+
+        }
+        @keyframes modal{
+            100%{
+                width: 400px;
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
     <button id="btn_bg">Background</button>
+    <br>
 
     <label for="fname">First name:</label><br>
     <input type="text" id="fname" name="fname"><br>
     <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname">
+    <input type="text" id="lname" name="lname"><br>
     <button id="btn_form">SUBMIT</button>
 
     <div id="div_move" style="width: 200px;height: 200px;border: red 2px solid; position: absolute; top:50%;transition: all 0.2s;">
@@ -72,25 +128,43 @@
         <button onclick="moveRight()"id="btn_move_right">RIGHT</button>
     </div>
     <h1>ModalWindow</h1>
-    <button id="modal_window">OpenModal</button>
-    <div class="modal_grad">
-        <div class="modalWindow">
-            <div class="modalTitle">
-                <h2>Modal Title</h2>
+    <button id="btn_modal_window">OpenModal</button>
+    <div class="modal_sub"></div>
+    <div class="modalWindow">        
+        <div class="container">
+            <div class="modal_box">
+                <div class="modalTitle">
+                    <h2>Modal Title</h2>
+                </div>
+                <div class="modalContent">
+                    ModalContent<br>ModalContent<br>ModalContent
+                </div>
+                <div class="modalButtons">
+                    <button id="btn_close" class="btn_close">Close</button>
+                    <button id="btn_sub" class="btn_sub">Submit</button>
+                </div>        
             </div>
-            <div class="modalContent">
-                ModalContent
-            </div>
-            <div class="modalButtons">
-                <button class="btn_close">Close</button>
-                <button class="btn_save">Save changes</button>
-            </div>        
         </div>
     </div>
 
-    <!-- <div class="localBook">
+    <div class="localBook">
+        <div class="book_title">
+            <label for="fname">Name</label><br>
+            <input type="text" id="book_name" name="fname"><br>
+            <label for="lname">Number</label><br>
+            <input type="text" id="book_number" name="lname"><br>
+            <button id="btn_book">ADD</button>
+            <button onclick="updatebook()">UPDATE</button>
+            <button onclick="clearbook()">ClearBook</button>
+        </div>
+        <div class="book_content">
+            <div class="book_item">Name : Alexander || Number : +996705666302</div>
+        </div>
+    </div>
 
-    </div> -->
+    <div class="drag" style="width: 200px; height: 200px; border: red 2px solid;"></div>
+    <div class="drag" style="width: 200px; height: 200px; border: red 2px solid;"></div>
+    <div class="drag" style="width: 200px; height: 200px; border: red 2px solid;"></div>
     <script src="./main.js"></script>
 </body>
 </html>
