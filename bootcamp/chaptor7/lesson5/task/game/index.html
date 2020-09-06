@@ -12,12 +12,19 @@
             width: 100%;
             height: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: center; 
+            padding: 30px 0px 30px 0px;  
+            background: url(https://zastavok.net/main/abstraktnye/153754667966.jpg);   
+            background-size: cover;      
         }
         .game_main{
             width: min-content;
             height: min-content;
             text-align: center;
+            background-color: rgba(0, 0, 0, 0.75);
+            border: grey 2px solid;
+            border-radius: 10px;
+            padding: 20px 0px 20px 0px;
             /* border: red 2px solid; */
         }
         .game_title{
@@ -29,6 +36,13 @@
             font-weight: 500;
             border-bottom: black 1px solid;
             border-top: black 1px solid;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .game_title img{
+            width: 70px;
         }
         .game_table{
             display: flex;
@@ -36,10 +50,41 @@
             flex-wrap: wrap;
             width: 350px;
             margin: 15px 10px 15px 10px;
+            border: rosybrown 1px solid;
+            border-radius: 10px;
+            padding: 20px 10px 20px 10px;
         }
         .table_item img{
             width: 100%;
             height: 100%;
+        }
+        button{
+            background-color: rgba(0, 0, 0, 0);
+            border: 0;
+            outline: none;
+        }
+        button img{
+            width: 60px;  
+            padding: 5px 5px 5px 5px;                    
+        }
+        .rotate:hover{   
+            animation: rotate 2s; 
+            animation-direction: normal;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;        
+        }
+        .comp:hover{
+            background-color: grey;
+            border-radius: 10px;
+        }
+        @keyframes rotate {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
@@ -63,11 +108,12 @@
                 <div class="table_item" style="width:100px;height: 100px; border-top: 3px solid blue;border-right: 3px solid blue;border-bottom: 3px none blue;border-left: 3px solid blue;"></div>
                 <div class="table_item" style="width:100px;height: 100px; border-top: 3px solid blue;border-right: 3px none blue;border-bottom: 3px none blue;border-left: 3px solid blue;"></div>
             </div>
-            <button onclick="backStep()">ComputerStep</button>
+            <button onclick="backStep()"><img class="comp" src="./1200px-Gnome-computer.svg.png" alt=""></button>
+            <button onclick="restartGame()"><img class="rotate" src="./Download-Restart-PNG-File-333-1000x1000.png" alt=""></button>
         </div>        
     </div>
     
-    <script src="../jquery-min-3.5.1.js"></script>
+    <script src="./jquery-min-3.5.1.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>

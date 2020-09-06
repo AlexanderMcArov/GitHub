@@ -105,6 +105,20 @@
             margin: 5px;
 
         }
+        #btn_like{
+            font-size: 20px;
+            background: #198ebf;
+            border: 0;
+            color: white;
+            border-radius: 10px;
+            padding: 5px 5px 5px 5px;
+            outline: none;
+        }
+        button{
+            background-color: rgba(0, 0, 0, 0);
+            outline: none;
+            border: 0;
+        }
         @keyframes modal{
             100%{
                 width: 400px;
@@ -114,7 +128,8 @@
     </style>
 </head>
 <body>
-    <button id="btn_bg">Background(RANDOM)</button>
+    <button id="btn_bg">Background(RANDOM)</button>    
+    <div style="padding: 20px 0px 20px 20px; "><button id="btn_like">Like <img style="width:20px" src="./561px-Facebook_like_thumb.png" alt=""></button><h4 class="like"></h4></div> 
     <br>
 
     <label for="fname">First name:</label><br>
@@ -123,9 +138,9 @@
     <input type="text" id="lname" name="lname"><br>
     <button id="btn_form">SUBMIT</button>
 
-    <div id="div_move" style="width: 200px;height: 200px;border: red 2px solid; position: absolute; top:50%;transition: all 0.2s;">
-        <button onclick="moveLeft()" id="btn_move_left">LEFT</button>
-        <button onclick="moveRight()"id="btn_move_right">RIGHT</button>
+    <div id="div_move" style="display: flex; justify-content: space-around; align-items: center; width: min-content;height: 200px;background-color: rgba(0, 0, 0); position: absolute; top:50%;transition: all 0.2s;">
+        <button onclick="moveLeft()" id="btn_move_left"><img style="width: 100px; " src="./w256h2561346685452ArrowRight.png" alt=""></button>
+        <button onclick="moveRight()"id="btn_move_right"><img style="width: 100px; transform: rotate(180deg);" src="./w256h2561346685452ArrowRight.png" alt=""></button>
     </div>
     <h1>ModalWindow</h1>
     <button id="btn_modal_window">OpenModal</button>

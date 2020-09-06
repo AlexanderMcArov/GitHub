@@ -7,12 +7,12 @@ let player = {
     nolik: 1,
     crestik: 2,
     img:['*','<img src="./nolik.png">','<img src="./krestik.png">'],
-    name:['*','Nolik','Simka','Ничья']
+    name:['*','<img src="./nolik.png">','<img src="./krestik.png">','Ничья']
 }
 let game_step = player.nolik
 let game_winner = 0
 
-game_title.text('Сейчас ходит: ' + player.name[game_step])
+game_title.html('Сейчас ходит: ' + player.name[game_step])
 $.each(table_item,function (index,value) {
     value = $(value)
     value.on('mouseenter',function () {
@@ -29,8 +29,8 @@ $.each(table_item,function (index,value) {
                 game_backplayer = true                                               
                 if(game_step == player.nolik) game_step = player.crestik
                 else if(game_step == player.crestik) game_step = player.nolik                 
-                game_title.text('Сейчас ходит : ' + player.name[game_step])
-                if(game_winner != 0) game_title.text('Игру выиграл: ' + player.name[game_winner]) 
+                game_title.html('Сейчас ходит : ' + player.name[game_step])
+                if(game_winner != 0) game_title.html('Игру выиграл: ' + player.name[game_winner]) 
                 console.log('Click: game_winner',game_winner,'last step: ',game_table[index])                         
             }            
         })
@@ -126,9 +126,21 @@ function backStep() {
         checkWinner()                                              
         if(game_step == player.nolik) game_step = player.crestik
         else if(game_step == player.crestik) game_step = player.nolik                 
-        game_title.text('Сейчас ходит : ' + player.name[game_step])
-        if(game_winner != 0) game_title.text('Игру выиграл: ' + player.name[game_winner]) 
+        game_title.html('Сейчас ходит : ' + player.name[game_step])
+        if(game_winner != 0) game_title.html('Игру выиграл: ' + player.name[game_winner]) 
         game_backplayer = false 
         console.log('BackStep: game_winner',game_winner,'last step: ',game_table[index]);
     }    
+}
+
+function restartGame(){
+    game_table = [0,0,0,0,0,0,0,0,0]
+    game_step = player.nolik
+    game_winner = 0
+    game_title.html('Сейчас ходит : ' + player.name[game_step])
+    $.each(table_item,function (index,value) {
+        value = $(value)
+        value.html('')
+        value.css('background','rgba(255,255,255,.0)')    
+    })
 }

@@ -103,7 +103,7 @@ let book_number = $('#book_number')
 let btn_book = $('#btn_book')
 let book_content = $('div.book_content')
 let list = ['','']
-let update_book = true
+
 book_name.on('change',()=>{
     console.log(book_name[0].value);
     list[0] = book_name[0].value
@@ -115,7 +115,6 @@ book_number.on('change',()=>{
 btn_book.on('click',()=>{
     if(!list[0] || !list[1]) return false
     localStorage.setItem(list[0],list[1])
-    update_book = true
     updatebook()
     list[0] = ''
     list[1] = ''
@@ -124,8 +123,12 @@ btn_book.on('click',()=>{
 })
 
 function updatebook() {       
-    if(update_book){
         book_content.text('')
+        let a = JSON.stringify(localStorage)
+        console.log(a);
+        let b = JSON.parse(a)
+        console.log(b);
+        console.log(b.PODDUBNYI);
         let keys = Object.keys(localStorage);
         for(let key of keys) {
         let newElem = $('<div>', {
@@ -134,14 +137,11 @@ function updatebook() {
           })
         book_content.append(newElem)
         }
-    } 
-    update_book = false
 }
 
 function clearbook() {
     localStorage.clear()
     book_content.text('')
-    update_book = true
 }
 
 
@@ -167,4 +167,18 @@ $.each(drag,function(index,item){
         
     })
 })       
-        
+   
+
+// Task 9 - VOTE
+let like_title = $('h4.like')
+let btn_like = $('#btn_like')
+let like_count = 0
+like_title.text(like_count + ' Likes')
+btn_like.on('click',function(){
+    like_count++
+    like_title.text(like_count + ' Likes')
+})
+
+let btn_vote = $('#btn_vote')
+
+
