@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chaptor 7 Lesson 5 jQuery</title>
     <style>
         .modalButtons{
             display: flex;
@@ -11,7 +11,7 @@
             padding: 20px 20px 20px 0px;
         }
         .modalWindow{
-            display: block; 
+            display: none; 
             position: absolute;
             top:0;
             left:0;
@@ -114,7 +114,7 @@
     </style>
 </head>
 <body>
-    <button id="btn_bg">Background</button>
+    <button id="btn_bg">Background(RANDOM)</button>
     <br>
 
     <label for="fname">First name:</label><br>
@@ -137,7 +137,7 @@
                     <h2>Modal Title</h2>
                 </div>
                 <div class="modalContent">
-                    ModalContent<br>ModalContent<br>ModalContent
+                    ModalContent<br><a href="./game/index.html" target="_blank">Игра крестики/Нолики</a><br>ModalContent
                 </div>
                 <div class="modalButtons">
                     <button id="btn_close" class="btn_close">Close</button>
@@ -158,7 +158,7 @@
             <button onclick="clearbook()">ClearBook</button>
         </div>
         <div class="book_content">
-            <div class="book_item">Name : Alexander || Number : +996705666302</div>
+
         </div>
     </div>
 
@@ -166,7 +166,7 @@
     <div class="drag" style="width: 200px; height: 200px; border: red 2px solid;"></div>
     <div class="drag" style="width: 200px; height: 200px; border: red 2px solid;"></div>
 
-    
+    <script src="./jquery-min-3.5.1.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>
