@@ -119,10 +119,10 @@ function backStep() {
     let item = table_item[index];
     console.log(index);
     value = $(item)
-    if(game_table[index] != 0 && game_winner == 0) backStep()
+    if(game_table[index] != 0 && game_winner == 0) backStep()    
     if(game_table[index] == 0 && game_backplayer && game_winner == 0){ 
         game_table[index] = game_step
-        value.html(player.img[game_step])      
+        value.html(player.img[game_step])   
         checkWinner()                                              
         if(game_step == player.nolik) game_step = player.crestik
         else if(game_step == player.crestik) game_step = player.nolik                 
