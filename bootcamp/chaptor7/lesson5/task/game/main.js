@@ -16,7 +16,7 @@ game_title.html('Сейчас ходит: ' + player.name[game_step])
 $.each(table_item,function (index,value) {
     value = $(value)
     value.on('mouseenter',function () {
-        if(game_table[index] == 0) value.css('background','rgba(50,255,50,.65)')
+        if(game_table[index] == 0) value.css('background',`rgba(${Math.random()*255},${Math.random()*255},${Math.random()*255},.65)`)
         else if(game_table[index] != 0) value.css('background','rgba(255,50,50,.65)')
         value.on('click',function(){
             if(game_table[index] != 0) return
@@ -116,8 +116,8 @@ function checkWinner() {
 function backStep() {
     game_backplayer = true 
     let index = Math.floor(Math.random()*table_item.length)
-    console.log(index);
     let item = table_item[index];
+    console.log(index);
     value = $(item)
     if(game_table[index] != 0 && game_winner == 0) backStep()
     if(game_table[index] == 0 && game_backplayer && game_winner == 0){ 
@@ -144,3 +144,44 @@ function restartGame(){
         value.css('background','rgba(255,255,255,.0)')    
     })
 }
+
+function helpStep(){
+    let arr = [[0,0,0],[0,0,0],[0,0,0]]
+    let crosx = [0,0,0]
+    let crosy = [0,0,0]
+    let index = 0
+    // let game_table = [0,0,0,0,0,0,0,0,0]
+    // Create array[][]    
+    for(let i = 0; i < 3;i++){
+        for(let j = 0; j < 3;j++){            
+            arr[i][j] = game_table[index]
+            index++
+        }
+    }
+    for (let i = 0; i < arr.length; i++) {  
+        // check diagonals
+        crosx[i] = arr[i][i]
+        crosy[i] = arr[i][arr.length-1-i]
+    }
+    console.log(crosy);
+    if(crosy.some(item => item == 0)){
+        $.each(crosy,function(index,item){            
+            if(item == 0){
+                console.log('HelpStep: item:',item,'Index:',index);  
+                crosy[index] = game_step              
+                let sum = crosy.reduce((a,b) => a + b) 
+                item = $(item)               
+                if(sum == 3) {
+                    console.log(sum);
+                }
+                else if(sum == 6) {
+                    console.log(sum);                    
+                }
+                else console.log('Нет доступных ходов');
+            }
+        })        
+    }
+}
+
+
+//  Clever Programmer 
