@@ -37,26 +37,40 @@ function addItemBook(name,number,id) {
     contacts_list.appendChild(list_item)
 }
 function editItemBook(id) {
-    console.log(id);
-    let item_id = document.querySelectorAll('div.list-item')
-    let inp = document.createElement('INPUT')
-    for(let i of item_id){
-        if(i.getAttribute('data-id') == id){   
-            let s = i.querySelector('.item-text')         
-            inp.classList.add('form_input')
-            inp.value = s.innerText
-            
-            s.innerText = ''
-            s.appendChild(inp)
-            i.addEventListener('change',function(){
-                s.innerText = inp.value
-            })
-        }
-        console.log();
-        console.log(i);
-        // let item_text = document.querySelectorAll(`div.item-text`)
-        // console.log(item_id[i],item_text[i]);            
-    }
+    let modal = document.querySelector('div.modal')
+    modal.classList.remove('d-none')
+    let inp_modal = document.querySelector('input#inp_modal')
+    let inp_modal_num = document.querySelector('input#inp_modal_num')
+    fetch(server_url+'/'+id)
+        .then(res=> res.json())
+        .then(data=>{
+            inp_modal.value = data.title
+            inp_modal_num.value = data.number
+        })    
+    let btn_ok = document.querySelector('button#btn-ok')
+    btn_ok.addEventListener('click',function(){
+        fetch(server_url + '/' + id,{
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                title: inp_modal.value,
+                number: inp_modal_num.value
+            })                
+        })
+        .then(res => {        
+            inp_modal.value = ''
+            inp_modal_num.value = ''
+            getJSONContacts()
+            id = -1 
+        })
+        .catch(rej => {
+            h4_err.innerText = rej
+        })        
+        modal.classList.add('d-none')        
+    })// event   
+
 }
 function deleteItemBook(id) {
     fetch(server_url+'/'+id,{
@@ -73,16 +87,18 @@ function addItemsBook(data){
     }
 }
 function getJSONContacts(){
-    contacts_list.innerHTML = ''
+    
     fetch(server_url)
         .then(res=> res.json())
-        .then(data=> addItemsBook(data))
+        .then(data=> {
+            contacts_list.innerHTML = ''
+            addItemsBook(data)  
+        })
         .catch(rej => h4_err.innerText = rej)
 }
 
 // EVENTS
 document.addEventListener('click',function(){
-    console.log(event.target.getAttribute('id'));
     if(event.target.getAttribute('id') == 'btn-add'){
         if(inp_list[0].value == '' || inp_list[1].value == ''){
             h4_err.innerText = 'Заполнены не все поля.'
@@ -105,16 +121,22 @@ document.addEventListener('click',function(){
             .catch(rej => {
                 h4_err.innerText = rej
             })
-        }
-        
+        }        
     }else if(event.target.getAttribute('id') == 'btn-update'){
         console.log('BUTTON: UPDATE');
+        h4_err.innerText = ''
         getJSONContacts()            
     }else if(event.target.getAttribute('id') == 'btn-edit'){
         console.log('BUTTON: EDIT');
+        console.log(event.target.parentElement.innerText,event.target.parentElement.getAttribute('data-id'));
         editItemBook(event.target.parentElement.getAttribute('data-id'))
     }else if(event.target.getAttribute('id') == 'btn-remove'){
         console.log('BUTTON: REMOVE');
+        console.log(event);
         deleteItemBook(event.target.parentElement.getAttribute('data-id'))
+    }else if(event.target.getAttribute('id') == 'btn-cancel'){
+        console.log('BUTTON: CANCEL');
+        let a = document.querySelector('div.modal')
+        a.classList.add('d-none')
     }//else if
 })

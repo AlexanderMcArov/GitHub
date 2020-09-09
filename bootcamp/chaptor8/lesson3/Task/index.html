@@ -20,7 +20,7 @@
                 <button class="btn btn-add" id="btn-add">ADD CONTACT</button>                  
                 <button class="btn btn-update" id="btn-update">UPDATE</button>                  
             </header>
-            <section class="contacts-list">
+            <section class="contacts-list">                
                 <div class="list-item row" data-id="0">
                     <div class="item-text">TEXT</div>
                     <button class="btn btn-edit" id="btn-edit">EDIT</button>
@@ -29,6 +29,19 @@
             </section>
         </div>
     </div>
+    <!-- MODAL -->
+    <div class="modal d-none">
+        <div class="modal_box">
+            <h1>HEELo MODAL</h1>
+            <label style ="margin-left: 15px;" for="fname">Имя:</label><br>
+            <input class="form_input" type="text" id="inp_modal" name="fname" required><br>
+            <label style ="margin-left: 15px;" for="number">Номер:</label><br>
+            <input class="form_input" type="text" id="inp_modal_num" name="number" required>
+            <button class="btn btn-add" id="btn-ok">OK</button>
+            <button class="btn btn-remove" id="btn-cancel">CANCEL</button>
+        </div>
+    </div>
+    <!-- MODAL -->
     <script src="./main.js"></script>
 </body>
 </html>
