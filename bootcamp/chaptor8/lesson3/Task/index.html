@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-book</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="col">
+            <header class="header">
+                <form id="form-contact-add" class="my-form"> 
+                    <label style ="margin-left: 15px;" for="fname">Имя:</label><br>
+                    <input class="form_input" type="text" id="fname" name="fname" required><br>
+                    <label style ="margin-left: 15px;" for="number">Номер:</label><br>
+                    <input class="form_input" type="text" id="number" name="number" required>
+                </form>
+                <h4 class='err'></h4>
+                <button class="btn btn-add" id="btn-add">ADD CONTACT</button>                  
+                <button class="btn btn-update" id="btn-update">UPDATE</button>                  
+            </header>
+            <section class="contacts-list">
+                <div class="list-item row" data-id="0">
+                    <div class="item-text">TEXT</div>
+                    <button class="btn btn-edit" id="btn-edit">EDIT</button>
+                    <button class="btn btn-remove" id="btn-remove">REMOVE</button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
