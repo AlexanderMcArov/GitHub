@@ -13,6 +13,8 @@ class Tamagocha{
     say(){
         this.hungry--
         this.happines--
+        info[1].innerHTML = "Hungry: " + this.hungry
+        info[2].innerHTML = "Happy: " + this.happines
         return `Hello. I'm ${this.name}!`
     }
     play(){
