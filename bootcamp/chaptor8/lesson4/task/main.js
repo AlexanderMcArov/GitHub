@@ -4,7 +4,7 @@ let buttons = document.querySelectorAll('button')
 let gameTitle = document.querySelector('.main_title')
 let info = document.querySelectorAll('.foo_info')
 let moves = document.querySelector('.moves')
-
+let timer = true
 class Animal{
     constructor(name,hungry,happines){
         this.name = name
@@ -17,8 +17,10 @@ class Animal{
         info[1].innerHTML = "Hungry: " + this.hungry
         info[2].innerHTML = "Happy: " + this.happines
         moves.innerHTML = '<img src="./img/say.png">'
+        timer = false
         setTimeout(()=>{
             moves.innerHTML = ''
+            timer = true
         },3000)
         return `Hello. I'm ${this.name}!`
     }
@@ -29,8 +31,10 @@ class Animal{
         info[1].innerHTML = "Hungry: " + this.hungry
         info[2].innerHTML = "Happy: " + this.happines
         moves.innerHTML = '<img src="./img/play.png">'
+        timer = false
         setTimeout(()=>{
             moves.innerHTML = ''
+            timer = true
         },3000)
         return `${this.name} Playing: Hungry => ${this.hungry}, Happy => ${this.happines}`
     }
@@ -41,7 +45,9 @@ class Animal{
         info[1].innerHTML = "Hungry: " + this.hungry
         info[2].innerHTML = "Happy: " + this.happines
         moves.innerHTML = '<img src="./img/eat.gif">'
+        timer = false
         setTimeout(()=>{
+            timer = true
             moves.innerHTML = ''
         },3000)
         return `${this.name} Playing: Hungry => ${this.hungry}, Happy => ${this.happines}`
@@ -64,12 +70,14 @@ function main(){
     buttons.forEach(item => {
         item.addEventListener('click',function(){
             console.log(item.getAttribute('id'));
-            if(item.getAttribute('id') == 'play'){
-                gameTitle.innerHTML += "<br>" + Catty.play()
-            }else if(item.getAttribute('id') == 'eat'){
-                gameTitle.innerHTML += "<br>" + Catty.eat()
-            }else if(item.getAttribute('id') == 'say'){
-                gameTitle.innerHTML += "<br>" + Catty.say()
+            if(timer){
+                if(item.getAttribute('id') == 'play'){
+                    gameTitle.innerHTML += "<br>" + Catty.play()
+                }else if(item.getAttribute('id') == 'eat'){
+                    gameTitle.innerHTML += "<br>" + Catty.eat()
+                }else if(item.getAttribute('id') == 'say'){
+                    gameTitle.innerHTML += "<br>" + Catty.say()
+                }
             }
         })
     })
