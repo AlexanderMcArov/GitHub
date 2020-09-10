@@ -43,6 +43,8 @@ function main(){
                 gameTitle.innerHTML += "<br>" + Catty.play()
             }else if(item.getAttribute('id') == 'eat'){
                 gameTitle.innerHTML += "<br>" + Catty.eat()
+            }else if(item.getAttribute('id') == 'say'){
+                gameTitle.innerHTML += "<br>" + Catty.say()
             }
         })
     })
