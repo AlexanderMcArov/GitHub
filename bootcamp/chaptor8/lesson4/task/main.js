@@ -3,6 +3,7 @@ console.log('Tamagocha');
 let buttons = document.querySelectorAll('button')
 let gameTitle = document.querySelector('.main_title')
 let info = document.querySelectorAll('.foo_info')
+let moves = document.querySelector('.moves')
 
 class Tamagocha{
     constructor(name,hungry,happines){
@@ -15,6 +16,10 @@ class Tamagocha{
         this.happines--
         info[1].innerHTML = "Hungry: " + this.hungry
         info[2].innerHTML = "Happy: " + this.happines
+        moves.innerHTML = '<img src="./img/say.png">'
+        setTimeout(()=>{
+            moves.innerHTML = ''
+        },3000)
         return `Hello. I'm ${this.name}!`
     }
     play(){
@@ -23,6 +28,10 @@ class Tamagocha{
         this.happines++
         info[1].innerHTML = "Hungry: " + this.hungry
         info[2].innerHTML = "Happy: " + this.happines
+        moves.innerHTML = '<img src="./img/play.png">'
+        setTimeout(()=>{
+            moves.innerHTML = ''
+        },3000)
         return `${this.name} Playing: Hungry => ${this.hungry}, Happy => ${this.happines}`
     }
     eat(){
@@ -31,6 +40,10 @@ class Tamagocha{
         this.happines--
         info[1].innerHTML = "Hungry: " + this.hungry
         info[2].innerHTML = "Happy: " + this.happines
+        moves.innerHTML = '<img src="./img/eat.gif">'
+        setTimeout(()=>{
+            moves.innerHTML = ''
+        },3000)
         return `${this.name} Playing: Hungry => ${this.hungry}, Happy => ${this.happines}`
     }
 }
