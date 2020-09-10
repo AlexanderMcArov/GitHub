@@ -5,12 +5,12 @@ let gameTitle = document.querySelector('.main_title')
 let info = document.querySelectorAll('.foo_info')
 let moves = document.querySelector('.moves')
 
-class Tamagocha{
+class Animal{
     constructor(name,hungry,happines){
         this.name = name
         this.hungry = hungry
         this.happines = happines
-    }
+    } 
     say(){
         this.hungry--
         this.happines--
@@ -47,6 +47,16 @@ class Tamagocha{
         return `${this.name} Playing: Hungry => ${this.hungry}, Happy => ${this.happines}`
     }
 }
+
+class Tamagocha extends Animal{    
+    constructor(name,hungry,happines){
+        super(name,hungry,happines)
+        this.name = name
+        this.hungry = hungry
+        this.happines = happines        
+    }       
+}
+
 
 function main(){
     let Catty = new Tamagocha('Catty',60,80)
