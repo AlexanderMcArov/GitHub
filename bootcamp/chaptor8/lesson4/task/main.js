@@ -5,6 +5,7 @@ let gameTitle = document.querySelector('.main_title')
 let info = document.querySelectorAll('.foo_info')
 let moves = document.querySelector('.moves')
 let timer = true
+
 class Animal{
     constructor(name,hungry,happines){
         this.name = name
