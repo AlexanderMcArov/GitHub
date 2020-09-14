@@ -4,87 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monopoly</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    
-    <div class="container row">
-        <div class="player_table">
-            <div class="player" player-id="1">
-                <h5>Player 1</h5>
-                <h5>Money:5000</h5>
-            </div>
-            <div class="player" player-id="2">
-                <h5>Player 1</h5>
-                <h5>Money:5000</h5>
-            </div>
-            <div class="player" player-id="3">
-                <h5>Player 1</h5>
-                <h5>Money:5000</h5>
-            </div>
-            <div class="player" player-id="4">
-                <h5>Player 1</h5>
-                <h5>Money:5000</h5>
-            </div>
-        </div>
-        <div class="main_table">            
-            <div class="up_line row">
-                <div class="start">Start</div>
-                <div class="item">
-                    <div class="item_title">Title</div>
-                </div>
-                <div class="item">Item</div>
-                <div class="item">Item</div>
-                <div class="item">Item</div>
-                <div class="item">Item</div>
-                <div class="item">Item</div>
-                <div class="item">Item</div>
-                <div class="item">Item</div>
-                <div class="item">Item</div>
-                <div class="jail">Jail</div>
-            </div>
-            <div class="center_line">
-                <div class="left_line row">
-                    <div class="item">
-                        <div class="item_title">Title</div>
-                    </div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                </div>
-                <div class="right_line row">
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                </div>
-            </div>
-            <div class="down_line row">
-                <div class="taxi">taxi</div>
-                <div class="item">Item</div>
-                <div class="item">Item</div>
-                <div class="item">Item</div>
-                <div class="item">Item</div>
-                <div class="item">Item</div>
-                <div class="item">Item</div>
-                <div class="item">Item</div>
-                <div class="item">Item</div>
-                <div class="item">Item</div>
-                <div class="police">Police</div>
-            </div>
-        </div>
-    </div>
 
-    <script src="./main.js"></script>
+    <div class="container">
+        <div class="main_table">
+            <div class="list_upline row">
+                <div class="cross freeParking"><img style="transform: rotate(180deg);" src="./img/main_parkingFree.jpg" alt=""></div>
+                <div class="item">
+                    <div class="item_header"></div>
+                    <div class="item_body">Moscow</div>
+                    <div class="item_footer row">Price: <h6>25000$</h6></div>
+                </div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="cross goToJail"><img style="transform: rotate(180deg);" src="./img/main_goToJail.jpg" alt=""></div>
+            </div>
+            <div class="list_center row">
+                <div class="list_leftSide row">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>        
+                <div class="list_centerSide">
+                    <img style="width:500px;" src="./img/main_logo.webp" alt="">
+                </div> 
+                <div class="list_rightSide row">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+            </div>
+            <div class="list_downline row">
+                <div class="cross JAIL"><img style="transform: rotate(-90deg);" src="./img/main_JAIL.jpg" alt=""></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="cross START"><img style="transform: rotate(0deg);" src="./img/main_START.jpg" alt=""></div>
+            </div>
+        </div>        
+    </div>
+    <div><img style="width: 1000px;" src="./img/9d12f5d990ce184b297a91e68250a1c8.jpg" alt=""></div>  <!-- example -->
+    
+    <script src="./js/main.js"></script>
 </body>
 </html>

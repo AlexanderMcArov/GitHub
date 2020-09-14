@@ -1,0 +1,111 @@
+/*
+MODIFICATORS - FOR PAGE
+MAIN_TABLE - Game table CSS
+ITEM_CSS - Game polygon CSS
+*/
+
+
+body{
+    margin: 0px;
+}
+/* /MODIFICATORS */
+.container{
+    display: flex;
+    justify-content: center;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+}
+.br{
+    border: black 2px solid;
+}
+/* /MODIFICATORS */
+
+/* MAIN_TABLE  */
+.main_table{
+    background-color: #c1d5b9;
+    width: min-content;
+    height: min-content;
+    border: #02a9b3 10px solid;
+}
+
+.list_upline{
+    margin: 0px;
+}
+.list_center{
+    width: inherit;
+    position: relative;
+    height: 757px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.list_leftSide{
+    position: absolute;
+    left: -313px;
+    transform: rotate(90deg);
+}
+.list_centerSide{
+    position: absolute;
+    left: 250px;
+    width: 500px;
+    height: 500px;
+}
+.list_rightSide{
+    position: absolute;
+    left: 573px;
+    transform: rotate(-90deg);
+}
+/* .list_downline{
+
+} */
+/* /MAIN_TABLE  */
+
+/* CROSS */
+.cross{
+    width: 130px;
+    height: 130px;
+}
+/* /CROSS */
+
+/* ITEM_CSS */
+.item{
+    width: 80px;
+    height: 126px;  
+    border: black 2px solid;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.item_header{
+    height: 30px;
+    text-align: center;
+    background-color: blueviolet;
+    font-size: 15px;
+    color: white;
+    border-bottom: black 1px solid;
+}
+.item_body{
+    height: max-content;
+    color: black;
+    text-align: center;
+}
+.item_footer{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    text-align: center;
+    height: 25px;
+    border-top: black 1px solid;
+}
+.item_footer h6{
+    margin: 0px;
+    font-size: 14px;
+    color: green;
+}
+/* /ITEM_CSS */
