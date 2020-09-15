@@ -1,0 +1,46 @@
+html, body{
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+}
+
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
+}
+
+.todo{
+  background-color: rgb(25, 25, 25);
+  padding: 10px 10px;
+}
+
+.todo-list{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.todo-list_item{
+  color: blueviolet;
+  text-align: center;
+  border: white 1px solid;
+  border-radius: 3px;
+  margin: 10px 0;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.App{
+  display: flex;
+  justify-content: center;
+}
+
+li:hover{
+  background: rgb(50, 50, 50);
+}
+
+.todo-list_item.checked{
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, .70);
+}
