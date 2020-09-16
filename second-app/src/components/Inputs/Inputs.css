@@ -1,0 +1,36 @@
+.inputs_list{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.input_item{
+    height: 15px;
+    border-radius: 10px;
+    border: black 1px solid;
+    padding: 10px 10px;
+    outline: none;
+}
+
+.input_box{
+    display: flex;
+    align-items: center;
+}
+
+.input_box h3{
+    margin-right: 20px;
+}
+
+.btn{
+    padding: 10px;
+    border: black 2px solid;
+    font-size: 15px;
+    color: white;
+    font-weight: 600;
+}
+.btn:hover{
+    border: white 2px solid;
+}
+.send{
+    background-color: rgb(50, 150, 50);
+}

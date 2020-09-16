@@ -1,21 +1,30 @@
 import React, {useState} from 'react';
-import TodoItem from './components/TodoItem';
+import InputList from './components/Inputs/InputList'
+import './App.css'
 
 function App() {
-  const [bbol, setBool] = useState(true)
 
-  
-
-  function func1(){
-    
-  }
+  let arr_names = [
+    {
+      name: "Sanya",
+      surname: 'Week',
+      age: 24
+    },
+    {
+      name: "Petya",
+      surname: 'Week',
+      age: 22
+    },
+    {
+      name: "Galla",
+      surname: 'Week',
+      age: 21
+    }
+  ]
 
   return (
     <div className="App">
-      <button onClick={func1}>Click Me</button>
-      <ul className = "todo">
-        <TodoItem/>
-      </ul>
+       <InputList />
     </div>
   );
 }
