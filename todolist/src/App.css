@@ -1,0 +1,19 @@
+.App{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.col{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.br{
+  border: black 2px solid;
+}
+.main_page{
+  display: flex;
+  width: 600px;
+  padding: 10px;
+  justify-content: center;
+}
