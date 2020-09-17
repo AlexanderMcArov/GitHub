@@ -1,36 +1,9 @@
 import React, { useState } from 'react'
 import './Todo.css'
 
-function TodoList() {
+function TodoList(props) {
     
-    let todo_list = [
-        {
-            id: 1,
-            title: 'Купить паращют',
-            status: false
-        },
-        {
-            id: 2,
-            title: 'Купить кирпич',
-            status: false
-        },
-        {
-            id: 3,
-            title: 'Купить веревку',
-            status: false
-        },
-        {
-            id: 4,
-            title: 'Купить самокат',
-            status: true
-        },
-        {
-            id: 5,
-            title: 'Купить самолёт',
-            status: false
-        }
-    ]
-
+    let todo_list = props.list
     let [TodoList, setToDolist] = useState(todo_list)    
     let result = TodoList.map((item,index) => {
         let cl = ['todoitem']
@@ -38,12 +11,14 @@ function TodoList() {
         return (
         <li className={cl.join(' ')} key={item.id + '-li-' + index}>
             {item.title}
+
             {!item.status ? 
             <div className="btns">
                 <button className="btn ok" item-id={item.id} onClick={onClick}>OK</button>
                 <button className="btn edit" item-id={item.id} onClick={onClick}>EDIT</button>
                 <button className="btn delete" item-id={item.id} onClick={onClick}>DELETE</button>
             </div> : ''}
+
         </li>
         )
     })
