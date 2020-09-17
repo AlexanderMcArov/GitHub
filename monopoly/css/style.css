@@ -3,7 +3,14 @@ MODIFICATORS - FOR PAGE
 MAIN_TABLE - Game table CSS
 ITEM_CSS - Game polygon CSS
 */
-
+.colors{
+    display: flex;
+}
+.color_item{
+    width: 100px;
+    height: 100px;
+    border: black 2px solid;
+}
 
 body{
     margin: 0px;
@@ -83,7 +90,8 @@ body{
     justify-content: space-between;
 }
 .item_header{
-    height: 30px;
+    /* height: 30px; */
+    padding: 5px 0px 5px 0px;
     text-align: center;
     background-color: blueviolet;
     font-size: 15px;
@@ -94,6 +102,9 @@ body{
     height: max-content;
     color: black;
     text-align: center;
+}
+.item_body img{
+    width: 40%;
 }
 .item_footer{
     display: flex;
