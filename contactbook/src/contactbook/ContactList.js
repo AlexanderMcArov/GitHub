@@ -8,7 +8,7 @@ function ContactList() {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:8000/contacts")
+        fetch("http://localhost:3333/contacts")
             .then(res => res.json())
             .then(
             (result) => {

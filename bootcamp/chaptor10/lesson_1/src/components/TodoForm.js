@@ -9,7 +9,6 @@ export class TodoForm extends Component {
   }
   handleSubmit=(e)=>{
     e.preventDefault();
-    console.log(this.state.text);
     const todo={
       id: Date.now(),
       title: this.state.text,
@@ -29,7 +28,7 @@ export class TodoForm extends Component {
     })
   }
   render() {
-    console.log(this.props)
+    // console.log(this.props)
     return (
       <div>
         <form 

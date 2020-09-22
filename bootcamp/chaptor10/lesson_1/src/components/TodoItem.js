@@ -1,15 +1,20 @@
 import React, {useState} from 'react'
+import { useDispatch } from 'react-redux';
+import { deleteTodo } from '../redux/actions'
 
 function TodoItem(props) {
-  const [title, setTitle]=useState(props.item.title);
-  const [isEdit, setEdit]=useState(false);
+  const [title, setTitle] = useState(props.item.title);
+  const [isEdit, setEdit] = useState(false);
+  const dispatch = useDispatch()
   const classList = ["todo-list__item"];
+
   if(props.item.status){
     classList.push("checked")
   }
+
   const handleDelete=(e)=>{
     e.stopPropagation();
-    props.deleteTodo(props.item.id)
+    dispatch(deleteTodo(props.item.id))
   }
   const handleEditClick=(e)=>{
     e.stopPropagation()
@@ -17,18 +22,30 @@ function TodoItem(props) {
   }
   const handleEditSubmit = (e)=>{
     e.preventDefault();
-    props.editTodo({
-      ...props.item,
-      title:title
+    dispatch({
+      type: "EDIT_TODO",
+      payload:{
+        ...props.item,
+        title
+      }
     })
     setEdit(false)
+  }
+  const handleChangeStaus = () => {
+    dispatch({
+      type: "EDIT_TODO",
+      payload:{
+        ...props.item,
+        status: !props.item.status
+      }
+    })
   }
   const handleEditInput = (e)=>{
     setTitle(e.target.value);
   }
   return (
     <div>
-      <li onClick={()=>props.changeStatus(props.item.id)} 
+      <li onClick={handleChangeStaus} 
           className={classList.join(" ")}>
           <div>
             {

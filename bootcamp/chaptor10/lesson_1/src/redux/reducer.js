@@ -14,6 +14,7 @@ const INIT_TODO_STATE = {
 // }
 // }
 const TodoReducer = (state = INIT_TODO_STATE, action) => {
+  let todos = [...state.todos]
   switch (action.type) {
     case ADD_TODO:
       return { ...state,
@@ -22,9 +23,14 @@ const TodoReducer = (state = INIT_TODO_STATE, action) => {
       ]
       };
     case DELETE_TODO:
-      return { ...state };
+      todos = todos.filter(item => item.id !== action.payload)
+      return { ...state, todos };
     case EDIT_TODO:
-      return { ...state };
+      todos = todos.map(item => {
+        if(item.id === action.payload.id) return action.payload
+        else return item
+      })
+      return { ...state, todos};
     default:
       return state;
   }
