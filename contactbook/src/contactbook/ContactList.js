@@ -1,42 +1,30 @@
-import React, { useState , useEffect} from 'react'
+import React from 'react'
 import ContactItem from './ContactItem'
 
-function ContactList() {
+function ContactList(props) {
 
-    const [error, setError] = useState(null);
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [items, setItems] = useState([]);
+    let data = props.data
+    let upDate = props.contactItem
+    let toItem = []
+    console.log('Вызов');
 
-    useEffect(() => {
-        fetch("http://localhost:8000/contacts")
-            .then(res => res.json())
-            .then(
-            (result) => {
-                setIsLoaded(true);
-                setItems(result);
-            },
-            (error) => {
-                setIsLoaded(true);
-                setError(error);
-            }
-            )
-    }, [])
-
-    if (error) {
-        return <div>Ошибка: {error.message}</div>;
-    } else if (!isLoaded) {
-        return <div>Загрузка...</div>;
-    } else {
-        return (
-            <div className="contact_list">
-                <div className="col">
-                    {items.map((item,index)=>{
-                        return <ContactItem key={index} data={item}/>
-                    })}
-                </div>
-            </div>
-        );
+    if(data.length === undefined){
+        console.log('DATA пустой');
+        data = []
+    }else{
+        toItem = data.map((item,index) => {
+            return <ContactItem key={index+'-todoItem'} data={item} upDate={upDate}/>
+        })
     }
+    
+    return (
+        <div className="contact_list">
+            <div className="col">
+                {console.log('Срабатывает.')}
+                {toItem.length > 0 ? toItem : 'Список пустой.'}
+            </div>
+        </div>
+    );
     
 }
 

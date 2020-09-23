@@ -1,17 +1,18 @@
 import React, {useState} from 'react'
 import ContactList from './ContactList'
 
-function ContactInput() {
+function ContactInput(props) {
+
+    console.log(props);
 
     let [name,setName] = useState('')
     let [sname,setSname] = useState('')
     let [number,setNumber] = useState('')
     let [email,setEmail] = useState('')
-    let [update,setUpdate] = useState(false)    
-
+    let [jsonState,setJsonState] = useState({})    
+    
     function addItem(){
-        console.log(name,sname,number,email);
-        fetch('http://localhost:8000/contacts',{
+        fetch('http://localhost:3333/contacts',{
             method: "POST",
             headers:{'Content-Type':'application/json'},
             body: JSON.stringify({
@@ -21,10 +22,30 @@ function ContactInput() {
                 email
             })            
         })
-        .then(res=>{
-            setUpdate(!update)
-            console.log(update);
-        })
+            .then(res=>{
+                setName('')
+                setSname('')
+                setNumber('')
+                setEmail('')
+                downloadData()
+            })
+            .catch(err=>{
+                console.log(err);
+            })
+    }
+    
+    function downloadData(){
+        fetch('http://localhost:3333/contacts')
+            .then(res=>res.json())
+            .then(data=>{
+                setJsonState(data)
+            })
+    }    
+
+    if(!props.isLoad){
+        downloadData()
+        console.log("APP LOAD");
+        props.setLoad(true)
     }
 
     return (
@@ -35,9 +56,13 @@ function ContactInput() {
                     <label for="name">SurName</label><input value={sname} onChange={e=>setSname(e.target.value)}/>
                     <label for="name">Number</label><input value={number} onChange={e=>setNumber(e.target.value)}/>
                     <label for="name">Email</label><input value={email} onChange={e=>setEmail(e.target.value)}/>
-                    <button className="inp_btn" onClick={addItem}>ADD</button>
+                    <div className="row">
+                        <button className="inp_btn" onClick={addItem}>ADD</button>
+                        <div className="mx-5"></div>
+                        <button className="inp_btn update" onClick={downloadData}>UPDATE</button>
+                    </div>
                     <span className="hr"></span>
-                    <ContactList update={update}/>
+                    <ContactList data={jsonState} contactItem={downloadData}/>
                 </div>
             </div>                
         </div>
