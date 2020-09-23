@@ -89,14 +89,21 @@ body{
     flex-direction: column;
     justify-content: space-between;
 }
+
 .item_header{
-    /* height: 30px; */
+    height: 20px;
     padding: 5px 0px 5px 0px;
     text-align: center;
     background-color: blueviolet;
     font-size: 15px;
     color: white;
     border-bottom: black 1px solid;
+    display: flex;
+    justify-content: start;
+}
+.item_header img{
+    margin: 0px;
+    height: 18px;
 }
 .item_body{
     height: max-content;
