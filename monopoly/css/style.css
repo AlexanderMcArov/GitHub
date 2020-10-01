@@ -1,129 +1,34 @@
-/*
-MODIFICATORS - FOR PAGE
-MAIN_TABLE - Game table CSS
-ITEM_CSS - Game polygon CSS
-*/
-.colors{
-    display: flex;
-}
-.color_item{
-    width: 100px;
-    height: 100px;
-    border: black 2px solid;
-}
-
 body{
-    margin: 0px;
+    margin: 0;
 }
-/* /MODIFICATORS */
+*{
+    margin: 0;
+}
 .container{
     display: flex;
     justify-content: center;
 }
-.row{
-    display: flex;
-    flex-direction: row;
-}
-.col{
-    display: flex;
-    flex-direction: column;
-}
-.br{
-    border: black 2px solid;
-}
-/* /MODIFICATORS */
 
-/* MAIN_TABLE  */
-.main_table{
-    background-color: #c1d5b9;
-    width: min-content;
-    height: min-content;
-    border: #02a9b3 10px solid;
-}
-
-.list_upline{
-    margin: 0px;
-}
-.list_center{
-    width: inherit;
-    position: relative;
-    height: 757px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.list_leftSide{
-    position: absolute;
-    left: -313px;
-    transform: rotate(90deg);
-}
-.list_centerSide{
-    position: absolute;
-    left: 250px;
-    width: 500px;
-    height: 500px;
-}
-.list_rightSide{
-    position: absolute;
-    left: 573px;
-    transform: rotate(-90deg);
-}
-/* .list_downline{
-
-} */
-/* /MAIN_TABLE  */
-
-/* CROSS */
-.cross{
-    width: 130px;
-    height: 130px;
-}
-/* /CROSS */
-
-/* ITEM_CSS */
-.item{
-    width: 80px;
-    height: 126px;  
-    border: black 2px solid;  
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.item_header{
-    height: 20px;
-    padding: 5px 0px 5px 0px;
-    text-align: center;
-    background-color: blueviolet;
-    font-size: 15px;
-    color: white;
-    border-bottom: black 1px solid;
-    display: flex;
-    justify-content: start;
-}
-.item_header img{
-    margin: 0px;
-    height: 18px;
-}
-.item_body{
-    height: max-content;
+.header_title{
+    padding: 10px;
+    width: 800px;
     color: black;
     text-align: center;
+    border: rgb(139, 139, 139) 2px solid;
+    border-top-style: none;
+    border-radius: 0px 0px 10px 10px;
 }
-.item_body img{
-    width: 40%;
-}
-.item_footer{
-    display: flex;
-    align-items: center;
-    font-size: 14px;
+
+.game_table{
+    padding: 10px;
+    width: 800px;
+    color: black;
     text-align: center;
-    height: 25px;
-    border-top: black 1px solid;
+    border: rgb(139, 139, 139) 2px solid;
+    border-top-style: none;
+    border-radius: 10px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    word-spacing: 2px;
+    line-height: 20px;
 }
-.item_footer h6{
-    margin: 0px;
-    font-size: 14px;
-    color: green;
-}
-/* /ITEM_CSS */

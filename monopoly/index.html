@@ -3,76 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monopoly</title>
+    <title>Макет</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="colors">
-        
-    </div>
-    <div class="container">
-        <div class="main_table">
-            <div class="list_upline row">
-                <div class="cross freeParking"><img style="transform: rotate(180deg);" src="./img/main_parkingFree.jpg" alt=""></div>
-                <div class="item">
-                    <div class="item_header"></div>
-                    <div class="item_body">Moscow</div>
-                    <div class="item_footer row">Price: <h6>25000$</h6></div>
+    <header class="header">
+        <div class="container">
+            <div class="header_title">
+                <h2>Задание</h2>
+                <div style="text-align: start;">
+                    <h4>Наименование проекта: "Игра Монополия"</h4>
+                    <h4>Назначение и область применения: Игра для развития финансовой грамотности у детей от 3х лет.</h4>
+                    <h4>Предварительная структура сайта:</h4>
+                    <br>
+                    <ul>
+                        <li>Регистрация/Авторизация:
+                            <ul>
+                                <li>Имя</li>
+                                <li>Пароль</li>
+                                <li>Вспомнить пароль</li>
+                            </ul>
+                        </li>
+                        <br>
+                        <li>Личный кабинет игрока:
+                            <ul>
+                                <li>сохранение достижений</li>
+                                <li>статистика WinRate</li>
+                                <li>восстановить пароль - отправить сообщение на почту с ссылкой на восстановление пароля</li>
+                            </ul>
+                        </li>
+                        <br>
+                        <li>Header:
+                            <ul>
+                                <li>Логотип</li>
+                                <li>Статистика текущей игры (время игры, деньги других игроков)</li>
+                                <li>Выйти из игры</li>
+                            </ul>
+                        </li>
+                        <br>
+                        <li>Игровое поле:
+                            <ul>
+                                <li>Основные игровые поля</li>
+                                <li>Поля с бонус картами</li>
+                                <li>Маркеры игроков</li>
+                            </ul>
+                        </li>
+                        <br>
+                        <li>
+                            Основная пользовательская история:
+                        </li>
+                        <li>Поле игрока - поле с информацией о текущем состоянии игрока</li>
+                    </ul>
                 </div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="cross goToJail"><img style="transform: rotate(180deg);" src="./img/main_goToJail.jpg" alt=""></div>
             </div>
-            <div class="list_center row">
-                <div class="list_leftSide row">
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                </div>        
-                <div class="list_centerSide">
-                    <img style="width:500px;" src="./img/main_logo.webp" alt="">
-                </div> 
-                <div class="list_rightSide row">
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                </div>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="game_table">
+                <h2>Описание проекта</h2>
+                <br>
+                <img style="width: 500px;" src="img/9d12f5d990ce184b297a91e68250a1c8.jpg">
+                <p>
+                    «Монополия» — экономическая и стратегическая настольная игра для двух и более человек. 
+                    Получила большую популярность в XX веке во многих странах мира, включая СССР; в последнем 
+                    была также известна под названиями «Менеджер», «Империя», «Бизнесмен». 
+                    Цель игры — рационально используя стартовый капитал, добиться банкротства других игроков. 
+                    Фактически «Монополия» представляет собой игровое поле, состоящее из квадратов, 
+                    которые проходят по кругу все игроки по очереди. Квадраты разделяются на активы 
+                    (предприятие, ценная вещь) и события. Когда игроку выпадает очередь ходить, то броском кубика 
+                    он определяет, какое количество шагов он должен совершить на игровом поле за этот ход 
+                    (каждый шаг соответствует одному очку на кубике и одному квадрату на игровом поле). 
+                    В настоящее время имеются многочисленные компьютерные воспроизведения «Монополии», 
+                    а также вариации для игровых консолей и сотовых телефонов.
+                </p>
             </div>
-            <div class="list_downline row">
-                <div class="cross JAIL"><img style="transform: rotate(-90deg);" src="./img/main_JAIL.jpg" alt=""></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="cross START"><img style="transform: rotate(0deg);" src="./img/main_START.jpg" alt=""></div>
-            </div>
-        </div>        
-    </div>
-    <div><img style="width: 1000px;" src="./img/9d12f5d990ce184b297a91e68250a1c8.jpg" alt=""></div>  <!-- example -->
+        </div>
+    </section>
     
-    <script src="./js/main.js"></script>
 </body>
 </html>
