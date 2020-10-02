@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+
+    <script src="http://www.webglearth.com/v2/api.js"></script>
+
+    <script>
+
+      function initialize() {
+        var earth = new WE.map('earth_div');
+        let a = 6.837425
+        let b = 80.639665
+
+        WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
+        
+        var options = {color: '#f00', opacity: 1, fillColor: '#f00', fillOpacity: 0.1, weight: 2};
+        var polygonB = WE.polygon([[6.837425, 80.639665], [a, b], [6.837425, 80.639665]], options).addTo(earth);
+
+        var marker = WE.marker([51.5, -0.09]).addTo(earth);
+        marker.bindPopup("<b>Hello world!</b><br>I am a popup.<br /><span style='font-size:10px;color:#999'>Tip: Another popup is hidden in Cairo..</span>", {maxWidth: 150, closeButton: true}).openPopup();
+        
+        var marker2 = WE.marker([a, b],'./airplane-google.png',50,50).addTo(earth);        
+        setInterval(()=>{
+            polygonB = WE.polygon([[6.837425, 80.639665], [40, 80], [6.837425, 80.639665]], options).addTo(earth);
+            earth.removeMarker(marker2)
+                a += 0.1
+                b += 0.1
+                marker2 = WE.marker([a, b],'./airplane-google.png',50,50).addTo(earth);
+                marker2.bindPopup("<b>Boeing 777</b><br>UAE AirLines<br><b>UE287S</b>", {maxWidth: 120, closeButton: false});
+                
+        },2000)
+
+
+        // var markerCustom = WE.marker([6.837425, 80.639665], 'https://i.pinimg.com/originals/a8/a3/8a/a8a38a72d8b3949fd55832668af15c0f.png', 100, 24).addTo(earth);
+
+        earth.setView([6.837425, 80.639665], 6);
+      }
+    </script>
+    <style>
+      html, body{padding: 0; margin: 0; background-color: black;}
+      #earth_div{top: 0; right: 0; bottom: 0; left: 0; position: absolute !important;}
+      .we-pm-icon{
+          background-size: cover;
+      }
+    </style>
+    <title>WebGL Earth API: Markers</title>
+  </head>
+  <body onload="initialize()">
+    <div id="earth_div"></div>
+  </body>
+</html>
